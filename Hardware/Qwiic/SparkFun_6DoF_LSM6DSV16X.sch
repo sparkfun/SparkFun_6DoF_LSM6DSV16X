@@ -25236,11 +25236,11 @@ signal for processing.&lt;/p&gt;
 <sheet>
 <plain>
 <text x="82.042" y="180.34" size="2.54" layer="94" font="vector" align="center">Accelerometer - LSM6DSV16X</text>
-<text x="243.84" y="88.646" size="1.778" layer="97" font="vector" rot="R180" align="top-left">If using Mode 2 (Sensor Hub Mode), 
+<text x="231.14" y="88.646" size="1.778" layer="97" font="vector" rot="R180" align="top-left">If using Mode 2 (Sensor Hub Mode), 
 cut both traces. </text>
 <text x="168.656" y="141.732" size="1.778" layer="97" font="vector" align="top-left">Cut traces to remove I2C
 pull-up resistors.</text>
-<text x="20.32" y="109.22" size="1.778" layer="97" font="vector" align="top-left">LSM6DSV16 MODES
+<text x="38.1" y="109.22" size="1.778" layer="97" font="vector" align="top-left">LSM6DSV16 MODES
 MODE1:  Perhipheral-only mode
    I2C or SPI
 MODE2:  Sensor Hub mode
@@ -25370,17 +25370,17 @@ LED.</text>
 <attribute name="VALUE" x="35.56" y="63.5" size="1.778" layer="96" font="vector" rot="MR180"/>
 <attribute name="NAME" x="35.56" y="42.418" size="1.778" layer="95" font="vector" rot="MR180"/>
 </instance>
-<instance part="GND1" gate="1" x="208.28" y="99.06" smashed="yes">
-<attribute name="VALUE" x="205.74" y="96.52" size="1.778" layer="96" font="vector"/>
+<instance part="GND1" gate="1" x="190.5" y="99.06" smashed="yes">
+<attribute name="VALUE" x="187.96" y="96.52" size="1.778" layer="96" font="vector"/>
 </instance>
-<instance part="GND2" gate="1" x="228.6" y="99.06" smashed="yes">
-<attribute name="VALUE" x="226.06" y="96.52" size="1.778" layer="96" font="vector"/>
+<instance part="GND2" gate="1" x="215.9" y="99.06" smashed="yes">
+<attribute name="VALUE" x="213.36" y="96.52" size="1.778" layer="96" font="vector"/>
 </instance>
-<instance part="SDX" gate="G$1" x="208.28" y="109.22" smashed="yes" rot="R90">
-<attribute name="NAME" x="205.74" y="109.22" size="1.778" layer="95" font="vector" rot="R180"/>
+<instance part="SDX" gate="G$1" x="190.5" y="109.22" smashed="yes" rot="R90">
+<attribute name="NAME" x="187.96" y="109.22" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
-<instance part="SCX" gate="G$1" x="228.6" y="109.22" smashed="yes" rot="R90">
-<attribute name="NAME" x="226.06" y="109.22" size="1.778" layer="95" font="vector" rot="R180"/>
+<instance part="SCX" gate="G$1" x="215.9" y="109.22" smashed="yes" rot="R90">
+<attribute name="NAME" x="213.36" y="109.22" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
 <instance part="LOGO3" gate="G$1" x="190.5" y="33.02" smashed="yes"/>
 <instance part="JP3" gate="JP1" x="40.64" y="25.4" smashed="yes" rot="MR180">
@@ -25435,7 +25435,7 @@ LED.</text>
 </instance>
 <instance part="U2" gate="G$1" x="55.88" y="134.62" smashed="yes">
 <attribute name="NAME" x="45.72" y="149.86" size="1.778" layer="95" font="vector" align="center"/>
-<attribute name="VALUE" x="45.72" y="116.84" size="1.778" layer="96" font="vector" align="center"/>
+<attribute name="VALUE" x="55.88" y="116.84" size="1.778" layer="96" font="vector" align="center"/>
 </instance>
 </instances>
 <busses>
@@ -25471,12 +25471,12 @@ LED.</text>
 <segment>
 <pinref part="GND2" gate="1" pin="GND"/>
 <pinref part="SCX" gate="G$1" pin="1"/>
-<wire x1="228.6" y1="101.6" x2="228.6" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="215.9" y1="101.6" x2="215.9" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND1" gate="1" pin="GND"/>
 <pinref part="SDX" gate="G$1" pin="1"/>
-<wire x1="208.28" y1="101.6" x2="208.28" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="190.5" y1="101.6" x2="190.5" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="1"/>
@@ -25594,9 +25594,9 @@ LED.</text>
 </segment>
 <segment>
 <pinref part="SDX" gate="G$1" pin="2"/>
-<wire x1="208.28" y1="114.3" x2="208.28" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="208.28" y1="116.84" x2="210.82" y2="116.84" width="0.1524" layer="91"/>
-<label x="210.82" y="116.84" size="1.27" layer="95" font="vector" xref="yes"/>
+<wire x1="190.5" y1="114.3" x2="190.5" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="190.5" y1="116.84" x2="193.04" y2="116.84" width="0.1524" layer="91"/>
+<label x="193.04" y="116.84" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 <segment>
 <wire x1="71.12" y1="134.62" x2="76.2" y2="134.62" width="0.1524" layer="91"/>
@@ -25617,9 +25617,9 @@ LED.</text>
 </segment>
 <segment>
 <pinref part="SCX" gate="G$1" pin="2"/>
-<wire x1="228.6" y1="114.3" x2="228.6" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="228.6" y1="116.84" x2="231.14" y2="116.84" width="0.1524" layer="91"/>
-<label x="231.14" y="116.84" size="1.27" layer="95" font="vector" xref="yes"/>
+<wire x1="215.9" y1="114.3" x2="215.9" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="215.9" y1="116.84" x2="218.44" y2="116.84" width="0.1524" layer="91"/>
+<label x="218.44" y="116.84" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 </net>
 <net name="INT1" class="0">
