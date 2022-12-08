@@ -26500,7 +26500,7 @@ MODE 3 and 4:  AUX SPI mode
    I2C and SPI access (Multi-read)   </text>
 <text x="93.726" y="261.874" size="1.27" layer="97" font="vector">VDD Range: 1.71V - 3.6V
 VDDIO Range: 1.62V - 3.6V</text>
-<text x="421.64" y="7.62" size="2.54" layer="94" font="vector">v10</text>
+<text x="421.64" y="7.62" size="2.54" layer="94" font="vector">v01</text>
 <text x="325.12" y="271.78" size="2.54" layer="94" font="vector" align="center">Jumpers</text>
 <text x="340.36" y="213.36" size="1.778" layer="97" font="vector">Cut trace to
 disconnect Power
