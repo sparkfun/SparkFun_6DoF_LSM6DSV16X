@@ -25586,7 +25586,7 @@ LED.</text>
 <pinref part="JP1" gate="JP1" pin="1"/>
 </segment>
 </net>
-<net name="PICO_AUX" class="0">
+<net name="SDX/PICO_AUX" class="0">
 <segment>
 <pinref part="JP3" gate="JP1" pin="5"/>
 <wire x1="45.72" y1="20.32" x2="50.8" y2="20.32" width="0.1524" layer="91"/>
