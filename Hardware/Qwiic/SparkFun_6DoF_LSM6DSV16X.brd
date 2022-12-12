@@ -55,7 +55,7 @@
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
 <layer number="49" name="Reference" color="13" fill="1" visible="yes" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
@@ -246,14 +246,17 @@
 <circle x="22.913975" y="9.0439875" radius="0.5334" width="0.254" layer="22"/>
 <wire x1="22.5663125" y1="9.3805375" x2="23.2806875" y2="8.6661625" width="0.2032" layer="22"/>
 <wire x1="23.241" y1="9.3805375" x2="22.526625" y2="8.6661625" width="0.2032" layer="22"/>
-<dimension x1="0" y1="25.4" x2="0" y2="0" x3="-8.636" y3="12.7" textsize="1.778" textratio="15" layer="47" unit="inch" visible="yes"/>
-<dimension x1="25.4" y1="25.4" x2="0" y2="25.4" x3="12.7" y3="30.48" textsize="1.778" textratio="15" layer="47" unit="inch" visible="yes"/>
-<dimension x1="5.08" y1="12.7" x2="5.08" y2="0" x3="-5.588" y3="6.35" textsize="1.778" textratio="15" layer="47" unit="inch" visible="yes"/>
+<dimension x1="0" y1="25.4" x2="0" y2="0" x3="-8.636" y3="12.7" textsize="1.778" textratio="15" layer="47" unit="inch"/>
+<dimension x1="25.4" y1="25.4" x2="0" y2="25.4" x3="12.7" y3="30.48" textsize="1.778" textratio="15" layer="47" unit="inch"/>
+<dimension x1="5.08" y1="12.7" x2="5.08" y2="0" x3="-5.588" y3="6.35" textsize="1.778" textratio="15" layer="47" unit="inch"/>
 <dimension x1="2.54" y1="2.54" x2="2.54" y2="0" x3="-1.778" y3="1.27" textsize="1.778" textratio="15" layer="47" unit="inch"/>
-<dimension x1="2.54" y1="22.86" x2="2.54" y2="25.4" x3="-2.54" y3="24.13" textsize="1.778" textratio="15" layer="47" unit="inch" visible="yes"/>
-<dimension x1="2.54" y1="22.86" x2="22.86" y2="22.86" x3="12.7" y3="27.178" textsize="1.778" textratio="15" layer="47" unit="inch" visible="yes"/>
+<dimension x1="2.54" y1="22.86" x2="2.54" y2="25.4" x3="-2.54" y3="24.13" textsize="1.778" textratio="15" layer="47" unit="inch"/>
+<dimension x1="2.54" y1="22.86" x2="22.86" y2="22.86" x3="12.7" y3="27.178" textsize="1.778" textratio="15" layer="47" unit="inch"/>
 <rectangle x1="12.446" y1="13.462" x2="12.4968" y2="13.7668" layer="41"/>
-<text x="12.7" y="-12.7" size="1.778" layer="51" font="vector">Elias Santistevan</text>
+<text x="12.7" y="-22.86" size="1.778" layer="51" font="vector">Elias Santistevan</text>
+<text x="-26.67" y="-3.81" size="1.778" layer="47" font="vector">Units in Inches</text>
+<dimension x1="6.35" y1="1.27" x2="0" y2="1.27" x3="3.175" y3="-7.62" textsize="1.778" layer="47" unit="inch"/>
+<dimension x1="0" y1="0" x2="19.05" y2="0" x3="9.525" y3="-12.7" textsize="1.778" layer="47" unit="inch"/>
 </plain>
 <libraries>
 <library name="SparkFun-Aesthetics">
@@ -8636,9 +8639,9 @@ These are the minimums &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabili
 <attribute name="PROD_ID" value="RES-08609" x="10.16" y="19.05" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" value="0" x="10.922" y="19.05" size="0.6096" layer="27" font="vector" ratio="20" rot="R90" align="top-center"/>
 </element>
-<element name="FRAME2" library="SparkFun-Aesthetics" package="CREATIVE_COMMONS" value="FRAME-LEDGER" x="-17.78" y="-12.7" smashed="yes">
-<attribute name="DESIGNER" value="" x="-17.78" y="-12.7" size="1.778" layer="27" display="off"/>
-<attribute name="REV" value="" x="-17.78" y="-12.7" size="1.778" layer="27" display="off"/>
+<element name="FRAME2" library="SparkFun-Aesthetics" package="CREATIVE_COMMONS" value="FRAME-LEDGER" x="-17.78" y="-22.86" smashed="yes">
+<attribute name="DESIGNER" value="" x="-17.78" y="-22.86" size="1.778" layer="27" display="off"/>
+<attribute name="REV" value="" x="-17.78" y="-22.86" size="1.778" layer="27" display="off"/>
 </element>
 <element name="U$7" library="top" package="INT16" value="" x="8.89" y="21.844" smashed="yes" rot="R90"/>
 <element name="U$9" library="top" package="OCS17" value="" x="11.43" y="21.844" smashed="yes" rot="R90"/>
