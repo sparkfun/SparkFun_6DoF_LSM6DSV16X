@@ -25221,6 +25221,14 @@ Standard 0402 sized pads with cathode pin indicator.
 <wire x1="-1.5" y1="1.25" x2="1.5" y2="1.25" width="0.1" layer="51"/>
 <wire x1="1.5" y1="1.25" x2="1.5" y2="-1.25" width="0.1" layer="51"/>
 <wire x1="1.5" y1="-1.25" x2="-1.5" y2="-1.25" width="0.1" layer="51"/>
+<wire x1="-1.58" y1="1.34" x2="-1.09" y2="1.34" width="0.1524" layer="21"/>
+<wire x1="-1.58" y1="0.85" x2="-1.58" y2="1.34" width="0.1524" layer="21"/>
+<wire x1="-1.56" y1="-1.32" x2="-1.56" y2="-0.83" width="0.1524" layer="21"/>
+<wire x1="-1.07" y1="-1.32" x2="-1.56" y2="-1.32" width="0.1524" layer="21"/>
+<wire x1="1.57" y1="-1.32" x2="1.08" y2="-1.32" width="0.1524" layer="21"/>
+<wire x1="1.57" y1="-0.83" x2="1.57" y2="-1.32" width="0.1524" layer="21"/>
+<wire x1="1.58" y1="1.34" x2="1.58" y2="0.85" width="0.1524" layer="21"/>
+<wire x1="1.09" y1="1.34" x2="1.58" y2="1.34" width="0.1524" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -25429,7 +25437,7 @@ LED.</text>
 <wire x1="152.4" y1="142.24" x2="152.4" y2="0" width="0.1524" layer="97" style="longdash"/>
 <text x="76.2" y="132.08" size="2.54" layer="94" font="vector" align="center">Filter Circuit - Analog In</text>
 <text x="76.2" y="124.46" size="1.778" layer="97" font="vector" align="center">Cut SCX and SDX jumpers to utilize analog
-input cabalities.</text>
+input cabalities (see "Jumpers" section).</text>
 <text x="63.5" y="86.36" size="1.778" layer="97" font="vector">DNP</text>
 <text x="88.9" y="86.36" size="1.778" layer="97" font="vector">DNP</text>
 <text x="63.5" y="50.8" size="1.778" layer="97" font="vector">DNP</text>
