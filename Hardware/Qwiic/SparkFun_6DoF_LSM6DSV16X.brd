@@ -7,7 +7,7 @@
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="dots" multiple="1" display="yes" altdistance="0.001" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="dots" multiple="1" display="yes" altdistance="0.005" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -9085,15 +9085,13 @@ These are the minimums &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabili
 <contactref element="JP3" pad="4"/>
 <wire x1="13.97" y1="23.749" x2="13.97" y2="24.13" width="0.254" layer="16"/>
 <wire x1="12.446" y1="22.225" x2="13.97" y2="23.749" width="0.254" layer="16"/>
-<wire x1="11.684" y1="19.773" x2="11.894" y2="19.983" width="0.1524" layer="1"/>
-<wire x1="10.16" y1="19.773" x2="10.37" y2="19.983" width="0.254" layer="1"/>
-<wire x1="10.243" y1="19.983" x2="11.894" y2="19.983" width="0.254" layer="1"/>
+<wire x1="11.684" y1="19.773" x2="11.8305" y2="19.9195" width="0.1524" layer="1"/>
 <wire x1="11.684" y1="19.773" x2="11.684" y2="20.828" width="0.254" layer="1"/>
 <wire x1="11.938" y1="21.082" x2="12.446" y2="21.082" width="0.254" layer="1"/>
 <via x="12.446" y="21.082" extent="1-16" drill="0.3048"/>
 <wire x1="12.446" y1="21.082" x2="12.446" y2="22.225" width="0.254" layer="16"/>
 <wire x1="11.684" y1="20.828" x2="11.938" y2="21.082" width="0.254" layer="1"/>
-<wire x1="10.243" y1="19.983" x2="10.37" y2="19.983" width="0" layer="19" extent="1-1"/>
+<wire x1="10.16" y1="19.773" x2="11.684" y2="19.773" width="0.254" layer="1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
@@ -9105,7 +9103,6 @@ These are the minimums &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabili
 </mfgpreviewcolors>
 <errors>
 <approved hash="19,16,a9d3ac0bd80bd5d3"/>
-<approved hash="19,16,20a22622fc2680e2"/>
 <approved hash="19,16,e2056655a22de21e"/>
 <approved hash="19,16,329832b83d383298"/>
 <approved hash="19,16,0c70612bd6471716"/>
