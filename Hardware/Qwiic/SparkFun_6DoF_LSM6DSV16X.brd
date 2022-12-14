@@ -7,7 +7,7 @@
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="dots" multiple="1" display="yes" altdistance="0.005" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="dots" multiple="1" display="yes" altdistance="0.001" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -37,7 +37,7 @@
 <layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
@@ -8518,7 +8518,7 @@ These are the minimums &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabili
 <attribute name="PROD_ID" value="CAP-00810" x="12.7" y="15.24" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="13.716" y="16.383" size="0.4064" layer="27" font="vector" rot="R180"/>
 </element>
-<element name="LOGO2" library="SparkFun-Aesthetics" package="OSHW-LOGO-MINI" value="OSHW-LOGOMINI" x="23.7744" y="14.71295" smashed="yes" rot="MR0"/>
+<element name="LOGO2" library="SparkFun-Aesthetics" package="OSHW-LOGO-MINI" value="OSHW-LOGOMINI" x="23.13305" y="19.0754" smashed="yes" rot="MR270"/>
 <element name="STANDOFF1" library="SparkFun-Hardware" package="STAND-OFF-TIGHT" value="STAND-OFFTIGHT" x="2.54" y="22.86" smashed="yes"/>
 <element name="STANDOFF2" library="SparkFun-Hardware" package="STAND-OFF-TIGHT" value="STAND-OFFTIGHT" x="2.54" y="2.54" smashed="yes"/>
 <element name="STANDOFF3" library="SparkFun-Hardware" package="STAND-OFF-TIGHT" value="STAND-OFFTIGHT" x="22.86" y="2.54" smashed="yes"/>
@@ -8601,7 +8601,7 @@ These are the minimums &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabili
 <element name="U$28" library="top" package="PWR8" value="" x="4.1148" y="18.415" smashed="yes" rot="R90"/>
 <element name="U$3" library="top" package="##CS##7" value="" x="16.5354" y="3.3528" smashed="yes" rot="R90"/>
 <element name="U$27" library="bot" package="##CS##8" value="" x="16.5354" y="3.3528" smashed="yes" rot="MR270"/>
-<element name="U$31" library="top" package="6DOF12" value="" x="7.9756" y="12.7" smashed="yes" rot="MR270"/>
+<element name="U$31" library="top" package="6DOF12" value="" x="8.1026" y="12.7" smashed="yes" rot="MR270"/>
 <element name="R5" library="SparkFun-Resistors" package="0603" value="10k" x="17.272" y="14.605" smashed="yes" rot="R90">
 <attribute name="NAME" x="16.51" y="14.605" size="0.6096" layer="25" font="vector" ratio="20" rot="R90" align="bottom-center"/>
 <attribute name="PROD_ID" value="RES-00824" x="17.272" y="14.605" size="1.778" layer="27" font="vector" ratio="15" rot="R90" display="off"/>
@@ -8657,7 +8657,7 @@ These are the minimums &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabili
 <element name="U$11" library="top" package="SDX19" value="" x="16.637" y="21.844" smashed="yes" rot="R90"/>
 <element name="U$42" library="top" package="#SDX#20" value="" x="14.732" y="15.367" smashed="yes" rot="MR0"/>
 <element name="U$43" library="top" package="#SCX#19" value="" x="10.668" y="15.367" smashed="yes" rot="MR0"/>
-<element name="U$46" library="top" package="LSM6DSV16X37" value="" x="6.35" y="12.7" smashed="yes" rot="MR270"/>
+<element name="U$46" library="top" package="LSM6DSV16X37" value="" x="6.477" y="12.7" smashed="yes" rot="MR270"/>
 <element name="U$47" library="top" package="LSM6DSV16X37" value="" x="6.731" y="12.7" smashed="yes" rot="R90"/>
 <element name="C5" library="SparkFun-Capacitors" package="0603" value="110pF" x="11.684" y="18.923" smashed="yes" rot="R270">
 <attribute name="NAME" x="12.446" y="18.923" size="0.6096" layer="25" font="vector" ratio="20" rot="R270" align="bottom-center"/>
@@ -8732,7 +8732,7 @@ These are the minimums &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabili
 <contactref element="C5" pad="2"/>
 <via x="12.7" y="18.1356" extent="1-16" drill="0.3048"/>
 <via x="12.0904" y="3.7846" extent="1-16" drill="0.3"/>
-<via x="24.13" y="19.05" extent="1-16" drill="0.3048"/>
+<via x="23.1394" y="19.0754" extent="1-16" drill="0.3048"/>
 <via x="22.86" y="12.7" extent="1-16" drill="0.3048"/>
 <wire x1="12.2" y1="13.7" x2="12.2" y2="14.216" width="0.254" layer="1"/>
 <wire x1="11.85" y1="14.566" x2="11.85" y2="15.24" width="0.254" layer="1"/>
@@ -8836,13 +8836,13 @@ These are the minimums &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabili
 <via x="16.00481875" y="12.57018125" extent="1-16" drill="0.3"/>
 <wire x1="16.00481875" y1="12.57018125" x2="16.1346375" y2="12.7" width="0.254" layer="16"/>
 <wire x1="16.1346375" y1="12.7" x2="17.78" y2="12.7" width="0.254" layer="16"/>
-<wire x1="17.78" y1="12.7" x2="18.415" y2="12.7" width="0.254" layer="16"/>
+<wire x1="17.78" y1="12.7" x2="18.669" y2="12.7" width="0.254" layer="16"/>
 <via x="19.05" y="5.207" extent="1-16" drill="0.3"/>
 <contactref element="JP1" pad="1"/>
 <wire x1="19.05" y1="5.207" x2="19.05" y2="1.27" width="0.254" layer="1"/>
 <wire x1="19.0476" y1="5.2094" x2="19.05" y2="5.207" width="0.254" layer="16"/>
-<wire x1="18.415" y1="12.7" x2="19.0476" y2="12.0674" width="0.254" layer="16"/>
-<wire x1="19.0476" y1="12.0674" x2="19.0476" y2="5.2094" width="0.254" layer="16"/>
+<wire x1="18.669" y1="12.7" x2="19.0476" y2="12.3214" width="0.254" layer="16"/>
+<wire x1="19.0476" y1="12.3214" x2="19.0476" y2="5.2094" width="0.254" layer="16"/>
 <contactref element="U2" pad="P1"/>
 <wire x1="13.8625" y1="11.95" x2="15.3846375" y2="11.95" width="0.254" layer="1"/>
 </signal>
