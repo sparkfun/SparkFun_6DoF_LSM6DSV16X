@@ -24547,7 +24547,7 @@ MODE1:  Perhipheral-only mode
 <wire x1="172.72" y1="185.42" x2="172.72" y2="116.84" width="0.2032" layer="97" style="longdash"/>
 <text x="65.786" y="172.974" size="1.27" layer="97" font="vector">VDD Range: 1.71V - 3.6V
 VDDIO Range: 1.62V - 3.6V</text>
-<text x="238.76" y="7.62" size="2.54" layer="94" font="vector">v10</text>
+<text x="238.76" y="7.62" size="2.54" layer="94" font="vector">v01</text>
 <text x="210.82" y="180.34" size="2.54" layer="94" font="vector" align="center">Jumpers</text>
 <text x="213.36" y="132.08" size="1.778" layer="97" font="vector">Cut trace to
 disconnect Power

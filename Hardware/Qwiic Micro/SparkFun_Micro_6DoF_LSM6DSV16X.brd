@@ -49,7 +49,7 @@
 <layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
-<layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
 <layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
@@ -200,7 +200,7 @@
 <wire x1="0" y1="7.62" x2="0" y2="0" width="0.2032" layer="20"/>
 <wire x1="0" y1="0" x2="19.05" y2="0" width="0.2032" layer="20"/>
 <wire x1="19.05" y1="0" x2="19.05" y2="7.62" width="0.2032" layer="20"/>
-<text x="0.263525" y="3.546475" size="0.8128" layer="16" font="vector" ratio="22" rot="SMR90">v10</text>
+<text x="0.263525" y="3.546475" size="0.8128" layer="16" font="vector" ratio="22" rot="SMR90">v01</text>
 <rectangle x1="9.1948" y1="4.953" x2="9.2456" y2="5.1816" layer="41"/>
 <dimension x1="2.54" y1="3.81" x2="0" y2="3.81" x3="1.27" y3="12.7" textsize="1.778" layer="47" dtype="horizontal" unit="inch"/>
 <wire x1="5.207" y1="3.171825" x2="7.112" y2="3.171825" width="0.254" layer="22"/>
@@ -2964,6 +2964,8 @@ These are the minimums &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabili
 <wire x1="13.72891875" y1="6.4897" x2="14.5161" y2="6.4897" width="0.1524" layer="1"/>
 <wire x1="14.5161" y1="6.4897" x2="14.8082" y2="6.7818" width="0.1524" layer="1"/>
 <wire x1="13.3802" y1="6.5254" x2="13.69321875" y2="6.5254" width="0.1524" layer="1"/>
+<wire x1="4.5974" y1="0.4064" x2="5.6134" y2="0.4064" width="0.254" layer="16"/>
+<wire x1="4.5974" y1="7.2136" x2="5.6134" y2="7.2136" width="0.254" layer="16"/>
 </signal>
 <signal name="SCL">
 <contactref element="R1" pad="1"/>
@@ -3034,8 +3036,9 @@ These are the minimums &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabili
 <wire x1="11.37525" y1="5.08" x2="10.75295" y2="4.4577" width="0.1524" layer="16"/>
 <wire x1="10.75295" y1="4.4577" x2="6.4389" y2="4.4577" width="0.1524" layer="16"/>
 <contactref element="J3" pad="1"/>
-<wire x1="5.08" y1="3.0988" x2="5.08" y2="1.27" width="0.1524" layer="16"/>
-<wire x1="6.4389" y1="4.4577" x2="5.08" y2="3.0988" width="0.1524" layer="16"/>
+<wire x1="5.588" y1="3.6068" x2="5.588" y2="1.778" width="0.1524" layer="16"/>
+<wire x1="5.588" y1="1.778" x2="5.08" y2="1.27" width="0.1524" layer="16"/>
+<wire x1="6.4389" y1="4.4577" x2="5.588" y2="3.6068" width="0.1524" layer="16"/>
 <contactref element="U2" pad="P4"/>
 <wire x1="10.6875" y1="4.56" x2="11.1894" y2="4.56" width="0.1524" layer="1"/>
 <wire x1="11.37525" y1="4.74585" x2="11.37525" y2="5.08" width="0.1524" layer="1"/>
@@ -3170,11 +3173,15 @@ These are the minimums &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabili
 <approved hash="19,16,c33bc16bc311c33f"/>
 <approved hash="6,16,15731e1d7260b6c8"/>
 <approved hash="6,16,9f14f2d67f0a2819"/>
-<approved hash="6,16,525a2115acce4d0e"/>
-<approved hash="6,16,b9f8f76c9c25c66d"/>
 <approved hash="19,16,3aa3b9838785987f"/>
 <approved hash="6,1,28dca85d1d40fba0"/>
 <approved hash="6,16,28dca85d1d40fba0"/>
+<approved hash="6,16,6d0e9b43dbe71559"/>
+<approved hash="6,16,543bee3f3f560798"/>
+<approved hash="6,16,82ac9762c3e7893b"/>
+<approved hash="6,16,10d97a90d8d8c72d"/>
+<approved hash="6,16,4b79f6a4e6f0ac29"/>
+<approved hash="6,16,674c6b35b053eac2"/>
 </errors>
 </board>
 </drawing>
