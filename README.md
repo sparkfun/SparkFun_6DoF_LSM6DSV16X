@@ -1,41 +1,37 @@
-# SparkFun_6DoF_LSM6DSV16X
+# SparkFun Micro 6DoF - LSM6DSV16X (Qwiic)
 ========================================
 
-[![SparkFun Part Name](URL for picture of part)](URL for product on Sparkfun.com)
 
-[*SparkFun Part Name (SKU)*](URL for product on Sparkfun.com)
 
-<Basic description of the part.>
+<table class="table table-hover table-striped table-bordered">
+    <tr>
+        <th class="text-center"> 
+        </th>
+        <th class="text-center">
+        </th>
+    </tr>
+    <tr align="center">
+        <td><a href="https://www.sparkfun.com/products/21325"><img src="" alt=""></a></td>
+        <td><a href="https://www.sparkfun.com/products/21336"><img src="" alt=""></a></td>
+    </tr>
+    <tr align="center">
+        <td><a href="https://www.sparkfun.com/products/21325">SparkFun 6DoF - LSM6DSV16X (Qwiic)</a></td>
+        <td><a href="https://www.sparkfun.com/products/21336">SparkFun Micro 6DoF - LSM6DSV16X (Qwiic)</a></td>
+    </tr>
+</table>
+
+The [SparkFun 6DoF - LSM6DSV16X (Qwiic)](https://www.sparkfun.com/products/21325) and the [SparkFun Micro 6DoF - LSM6DSV16X (Qwiic)](https://www.sparkfun.com/products/21336) are Qwiic enabled breakout boards based on the LSM6DSV16X triple access accelerometer from ST Microelectronic. 
 
 Repository Contents
 -------------------
 
 * **/Documentation** - Data sheets, additional product information
-* **/Enclosure** - Enclosure files 
-* **/Firmware** - Example code 
 * **/Hardware** - Eagle design files (.brd, .sch)
-* **/Libraries** - Libraries for use with the <PRODUCT NAME>
-* **/Production** - Production panel files (.brd)
-* **/Software** - Related software for the <PRODUCT NAME>
 
 Documentation
 --------------
 * **[Library](GitHub library URL)** - <LANGUAGE> library for the <PRODUCT NAME>.
-* **[Hookup Guide](Learn.SparkFun URL)** - Basic hookup guide for the <PRODUCT NAME>.
-* **[SparkFun Fritzing repo](https://github.com/sparkfun/Fritzing_Parts)** - Fritzing diagrams for SparkFun products.
-* **[SparkFun 3D Model repo](https://github.com/sparkfun/3D_Models)** - 3D models of SparkFun products. 
-* **[SparkFun Graphical Datasheets](https://github.com/sparkfun/Graphical_Datasheets)** -Graphical Datasheets for various SparkFun products.
-
-Product Versions
-----------------
-* [Part SKU](part URL)- Basic part and short description here
-* [Retail part SKU](retail URL)- Retail packaging of standard description here
-* [Any other parts this repo covers](any other URLs) - Description of said parts
-
-Version History
----------------
-* [vExxFxxZxxHxxLxxSxx](URL for tag specific to this version) - Description 
-* [vEyyFyyZyyHyyLyySyy](URL for tag specific to this version) - Description
+* **[Hookup Guide](https://learn.sparkfun.com/tutorials/sparkfun-6dof-lsm6dsv16x-qwiic-hookup-guide)** - Basic hookup guide for the <PRODUCT NAME>.
 
 License Information
 -------------------
