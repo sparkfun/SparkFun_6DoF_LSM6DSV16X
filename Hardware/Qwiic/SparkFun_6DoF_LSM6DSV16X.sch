@@ -11545,7 +11545,7 @@ MODE 3 and 4:  AUX SPI mode
    I2C and SPI access (Multi-read)   </text>
 <text x="93.726" y="261.874" size="1.27" layer="97" font="vector">VDD Range: 1.71V - 3.6V
 VDDIO Range: 1.62V - 3.6V</text>
-<text x="421.64" y="7.62" size="2.54" layer="94" font="vector">v01</text>
+<text x="421.64" y="7.62" size="2.54" layer="94" font="vector">v10</text>
 <text x="325.12" y="271.78" size="2.54" layer="94" font="vector" align="center">Jumpers</text>
 <text x="340.36" y="213.36" size="1.778" layer="97" font="vector">Cut trace to
 disconnect Power
@@ -11604,10 +11604,10 @@ in the "QVAR Sensing Channel"
 application note found here: 
 https://www.st.com/en/mems-and-sensors/lsm6dsv16x.html#
 </text>
-<text x="68.58" y="76.2" size="1.778" layer="97" font="vector" align="center">You can select whether P1 is tied to GND
-or tied to 3v (1) using the PAD1 jumper.</text>
-<text x="66.04" y="30.48" size="1.778" layer="97" font="vector" align="center">You can select whether P2 is tied to GND
-or tied to 3v3(1) using the PAD2 jumper.</text>
+<text x="68.58" y="76.2" size="1.778" layer="97" font="vector" align="center">You can select whether P1 is tied to 
+GND (0) or tied to 3v3 (1) using the PAD1 jumper.</text>
+<text x="66.04" y="30.48" size="1.778" layer="97" font="vector" align="center">You can select whether P2 is tied to 
+GND (0) or tied to 3v3 (1) using the PAD2 jumper.</text>
 </plain>
 <instances>
 <instance part="GND4" gate="1" x="68.58" y="198.12" smashed="yes">
