@@ -49,7 +49,7 @@
 <layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
-<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
 <layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
@@ -200,7 +200,7 @@
 <wire x1="0" y1="7.62" x2="0" y2="0" width="0.2032" layer="20"/>
 <wire x1="0" y1="0" x2="19.05" y2="0" width="0.2032" layer="20"/>
 <wire x1="19.05" y1="0" x2="19.05" y2="7.62" width="0.2032" layer="20"/>
-<text x="0.263525" y="3.546475" size="0.8128" layer="16" font="vector" ratio="22" rot="SMR90">v01</text>
+<text x="0.263525" y="3.546475" size="0.8128" layer="16" font="vector" ratio="22" rot="SMR90">v10</text>
 <rectangle x1="9.1948" y1="4.953" x2="9.2456" y2="5.1816" layer="41"/>
 <dimension x1="2.54" y1="3.81" x2="0" y2="3.81" x3="1.27" y3="12.7" textsize="1.778" layer="47" dtype="horizontal" unit="inch"/>
 <wire x1="5.207" y1="3.171825" x2="7.112" y2="3.171825" width="0.254" layer="22"/>
@@ -235,6 +235,7 @@
 <dimension x1="5.08" y1="6.35" x2="19.05" y2="6.35" x3="12.065" y3="10.16" textsize="1.778" textratio="15" layer="47" unit="inch"/>
 <dimension x1="13.97" y1="3.81" x2="13.97" y2="7.62" x3="22.86" y3="5.715" textsize="1.778" textratio="15" layer="47" unit="inch"/>
 <text x="-1.27" y="-10.16" size="1.778" layer="47" font="vector">Units in Inches</text>
+<wire x1="11.2776" y1="7.2898" x2="11.2776" y2="6.5278" width="0.3048" layer="21"/>
 </plain>
 <libraries>
 <library name="SparkFun-Aesthetics">
