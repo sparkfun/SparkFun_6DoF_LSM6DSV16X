@@ -24531,6 +24531,7 @@ signal for processing.&lt;/p&gt;
 <part name="R3" library="SparkFun-Resistors" deviceset="10KOHM" device="-0402T-1/16W-1%" value="10k"/>
 <part name="SUPPLY7" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="U2" library="lsm6dsv16x" deviceset="LSM6DSV16X" device=""/>
+<part name="GND8" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -24627,8 +24628,8 @@ accept 22AWG or smaller</text>
 <attribute name="VALUE" x="25.4" y="114.3" size="1.778" layer="96" font="vector"/>
 </instance>
 <instance part="C3" gate="G$1" x="27.94" y="134.62" smashed="yes">
-<attribute name="NAME" x="21.844" y="137.541" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="19.304" y="132.461" size="1.778" layer="96" font="vector"/>
+<attribute name="NAME" x="24.384" y="137.541" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="20.32" y="132.461" size="1.778" layer="96" font="vector"/>
 </instance>
 <instance part="ADDR" gate="G$1" x="106.68" y="142.24" smashed="yes" rot="MR180">
 <attribute name="NAME" x="128.778" y="148.209" size="1.778" layer="95" font="vector" rot="MR180"/>
@@ -24735,16 +24736,19 @@ accept 22AWG or smaller</text>
 <instance part="GND1" gate="1" x="142.24" y="88.9" smashed="yes">
 <attribute name="VALUE" x="139.7" y="86.36" size="1.778" layer="96" font="vector"/>
 </instance>
-<instance part="R3" gate="G$1" x="81.28" y="152.4" smashed="yes" rot="R90">
-<attribute name="NAME" x="79.756" y="152.4" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
-<attribute name="VALUE" x="82.804" y="152.4" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
+<instance part="R3" gate="G$1" x="83.82" y="152.4" smashed="yes" rot="R90">
+<attribute name="NAME" x="82.296" y="152.4" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
+<attribute name="VALUE" x="85.344" y="152.4" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
 </instance>
-<instance part="SUPPLY7" gate="G$1" x="81.28" y="160.02" smashed="yes">
-<attribute name="VALUE" x="80.264" y="163.576" size="1.778" layer="96" font="vector"/>
+<instance part="SUPPLY7" gate="G$1" x="83.82" y="160.02" smashed="yes">
+<attribute name="VALUE" x="82.804" y="163.576" size="1.778" layer="96" font="vector"/>
 </instance>
 <instance part="U2" gate="G$1" x="63.5" y="134.62" smashed="yes">
 <attribute name="NAME" x="53.34" y="149.86" size="1.778" layer="95" font="vector" align="center"/>
 <attribute name="VALUE" x="63.5" y="116.84" size="1.778" layer="96" font="vector" align="center"/>
+</instance>
+<instance part="GND8" gate="1" x="81.28" y="114.3" smashed="yes" rot="MR0">
+<attribute name="VALUE" x="83.82" y="111.76" size="1.778" layer="96" font="vector" rot="MR0"/>
 </instance>
 </instances>
 <busses>
@@ -24799,11 +24803,21 @@ accept 22AWG or smaller</text>
 <wire x1="142.24" y1="93.98" x2="142.24" y2="91.44" width="0.1524" layer="91"/>
 <pinref part="GND1" gate="1" pin="GND"/>
 </segment>
+<segment>
+<pinref part="U2" gate="G$1" pin="SDX/AH1/QVAR1"/>
+<wire x1="78.74" y1="134.62" x2="81.28" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="134.62" x2="81.28" y2="132.08" width="0.1524" layer="91"/>
+<pinref part="U2" gate="G$1" pin="SCX/AH2/QVAR2"/>
+<wire x1="78.74" y1="132.08" x2="81.28" y2="132.08" width="0.1524" layer="91"/>
+<junction x="81.28" y="132.08"/>
+<wire x1="81.28" y1="132.08" x2="81.28" y2="116.84" width="0.1524" layer="91"/>
+<pinref part="GND8" gate="1" pin="GND"/>
+</segment>
 </net>
 <net name="SCL" class="0">
 <segment>
-<wire x1="78.74" y1="139.7" x2="81.28" y2="139.7" width="0.1524" layer="91"/>
-<label x="81.28" y="139.7" size="1.27" layer="95" font="vector" xref="yes"/>
+<wire x1="78.74" y1="139.7" x2="83.82" y2="139.7" width="0.1524" layer="91"/>
+<label x="83.82" y="139.7" size="1.27" layer="95" font="vector" xref="yes"/>
 <pinref part="U2" gate="G$1" pin="SCL"/>
 </segment>
 <segment>
@@ -24824,8 +24838,8 @@ accept 22AWG or smaller</text>
 </net>
 <net name="SDA" class="0">
 <segment>
-<wire x1="78.74" y1="142.24" x2="81.28" y2="142.24" width="0.1524" layer="91"/>
-<label x="81.28" y="142.24" size="1.27" layer="95" font="vector" xref="yes"/>
+<wire x1="78.74" y1="142.24" x2="83.82" y2="142.24" width="0.1524" layer="91"/>
+<label x="83.82" y="142.24" size="1.27" layer="95" font="vector" xref="yes"/>
 <pinref part="U2" gate="G$1" pin="SDA/SDI"/>
 </segment>
 <segment>
@@ -24846,8 +24860,8 @@ accept 22AWG or smaller</text>
 </net>
 <net name="SA0" class="0">
 <segment>
-<wire x1="78.74" y1="137.16" x2="81.28" y2="137.16" width="0.1524" layer="91"/>
-<label x="81.28" y="137.16" size="1.27" layer="95" font="vector" xref="yes"/>
+<wire x1="78.74" y1="137.16" x2="83.82" y2="137.16" width="0.1524" layer="91"/>
+<label x="83.82" y="137.16" size="1.27" layer="95" font="vector" xref="yes"/>
 <pinref part="U2" gate="G$1" pin="SDO/SA0"/>
 </segment>
 <segment>
@@ -24858,8 +24872,8 @@ accept 22AWG or smaller</text>
 </net>
 <net name="INT1" class="0">
 <segment>
-<wire x1="81.28" y1="124.46" x2="78.74" y2="124.46" width="0.1524" layer="91"/>
-<label x="81.28" y="124.46" size="1.27" layer="95" font="vector" xref="yes"/>
+<wire x1="83.82" y1="124.46" x2="78.74" y2="124.46" width="0.1524" layer="91"/>
+<label x="83.82" y="124.46" size="1.27" layer="95" font="vector" xref="yes"/>
 <pinref part="U2" gate="G$1" pin="INT1"/>
 </segment>
 <segment>
@@ -24901,7 +24915,7 @@ accept 22AWG or smaller</text>
 <segment>
 <pinref part="R3" gate="G$1" pin="2"/>
 <pinref part="SUPPLY7" gate="G$1" pin="3.3V"/>
-<wire x1="81.28" y1="160.02" x2="81.28" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="160.02" x2="83.82" y2="157.48" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C3" gate="G$1" pin="1"/>
@@ -24968,8 +24982,8 @@ accept 22AWG or smaller</text>
 </net>
 <net name="N$4" class="0">
 <segment>
-<wire x1="78.74" y1="144.78" x2="81.28" y2="144.78" width="0.1524" layer="91"/>
-<wire x1="81.28" y1="144.78" x2="81.28" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="144.78" x2="83.82" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="144.78" x2="83.82" y2="147.32" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="1"/>
 <pinref part="U2" gate="G$1" pin="!CS!"/>
 </segment>
