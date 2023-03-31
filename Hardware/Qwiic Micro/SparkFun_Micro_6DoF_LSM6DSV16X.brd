@@ -7,7 +7,7 @@
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="dots" multiple="1" display="yes" altdistance="0.001" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="dots" multiple="1" display="yes" altdistance="0.005" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -47,9 +47,9 @@
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
 <layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
-<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
-<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
 <layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
@@ -2973,7 +2973,7 @@ These are the minimums &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabili
 <contactref element="J4" pad="1"/>
 <contactref element="TP4" pad="1"/>
 <via x="17.399" y="3.6068" extent="1-16" drill="0.3"/>
-<via x="7.493" y="3.4798" extent="1-16" drill="0.3"/>
+<via x="7.366" y="3.4798" extent="1-16" drill="0.3"/>
 <via x="16.4592" y="4.7498" extent="1-16" drill="0.3"/>
 <contactref element="U2" pad="P6"/>
 <contactref element="U2" pad="P7"/>
@@ -3117,8 +3117,6 @@ These are the minimums &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabili
 <via x="17.272" y="2.794" extent="1-16" drill="0.3048"/>
 <contactref element="R3" pad="2"/>
 <wire x1="7.7804" y1="1.9558" x2="6.858" y2="2.8782" width="0.1524" layer="1"/>
-<wire x1="6.858" y1="4.3434" x2="7.5946" y2="5.08" width="0.1524" layer="1"/>
-<wire x1="6.858" y1="2.8782" x2="6.858" y2="4.3434" width="0.1524" layer="1"/>
 <contactref element="C3" pad="1"/>
 <contactref element="U2" pad="P8"/>
 <contactref element="C4" pad="1"/>
@@ -3139,6 +3137,9 @@ These are the minimums &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabili
 <wire x1="15.8496" y1="2.794" x2="17.272" y2="2.794" width="0.2794" layer="1"/>
 <wire x1="17.272" y1="2.794" x2="17.3355" y2="2.8575" width="0.2794" layer="16"/>
 <wire x1="17.3355" y1="2.8575" x2="18.0975" y2="2.8575" width="0.2794" layer="16"/>
+<wire x1="6.858" y1="4.826" x2="7.112" y2="5.08" width="0.1524" layer="1"/>
+<wire x1="7.112" y1="5.08" x2="7.5946" y2="5.08" width="0.1524" layer="1"/>
+<wire x1="6.858" y1="2.8782" x2="6.858" y2="4.826" width="0.1524" layer="1"/>
 </signal>
 <signal name="N$5">
 <contactref element="R1" pad="2"/>
