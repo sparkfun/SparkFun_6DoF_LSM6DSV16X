@@ -181,7 +181,7 @@ Let there be light! An LED on the front of each board indicates power is being p
 The SparkFun 6DoF - LSM6DSV16X (Qwiic) follows the standard 1" x 1" convention of most of our Qwiic breakout boards. 
 
 <figure markdown>
-[![SparkFun 6DoF - LSM6DSV16X (Qwiic) Board Outline](assets/BoardFiles/SparkFun_6DoF_LSM6DSV16X-BoardOutline.png){ width="400" }](assets/BoardFiles/SparkFun_6DoF_LSM6DSV16X-BoardOutline.png "Click to enlarge")
+[![SparkFun 6DoF - LSM6DSV16X (Qwiic) Board Outline](assets/BoardFiles/SparkFun_6DoF_LSM6DSV16X-BoardOutline.png){ width=90% }](assets/BoardFiles/SparkFun_6DoF_LSM6DSV16X-BoardOutline.png "Click to enlarge")
 <figcaption markdown>SparkFun 6DoF - LSM6DSV16X (Qwiic)</figcaption>
 </figure>
 
@@ -191,7 +191,7 @@ The SparkFun 6DoF - LSM6DSV16X (Qwiic) follows the standard 1" x 1" convention o
 The SparkFun 6DoF Micro - LSM6DSV16X (Qwiic) measures 0.3" x 0.75". 
 
 <figure markdown>
-[![SparkFun 6DoF - LSM6DSV16X (Qwiic) Board Outline](assets/BoardFiles/SparkFun_Micro_6DoF_LSM6DSV16X-BoardOutline.png){ width="400" }](assets/BoardFiles/SparkFun_Micro_6DoF_LSM6DSV16X-BoardOutline.png "Click to enlarge")
+[![SparkFun 6DoF - LSM6DSV16X (Qwiic) Board Outline](assets/BoardFiles/SparkFun_Micro_6DoF_LSM6DSV16X-BoardOutline.png){ width=90% }](assets/BoardFiles/SparkFun_Micro_6DoF_LSM6DSV16X-BoardOutline.png "Click to enlarge")
 <figcaption markdown>SparkFun 6DoF Micro - LSM6DSV16X (Qwiic)</figcaption>
 </figure>
 
