@@ -280,8 +280,14 @@
 /* Parameters for PDF Rendering                                                       */
 /* ================================================================================== */
 
-/* Hides elemments with <class="pdf"> on webpage (used for the generated PDF) */
+/* Hides elemments with <class="pdf">, <class="qr">, or <class="tinyqr"> on webpage (used for the generated PDF) */
 * + .pdf {
+  display: none;
+}
+.md-typeset *.qr {
+  display: none;
+}
+.md-typeset *.tinyqr {
   display: none;
 }
 
@@ -293,6 +299,20 @@
   /* Shows elements with <class="pdf"> on webpage (used for the generated PDF) */
   * + .pdf {
     display: contents;
+  }
+  .md-typeset *.qr {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .md-typeset *.tinyqr {
+    display: inline-flex;
+    vertical-align: middle;
+    width: 40px;
+  }
+
+  .grid.cards.hide {
+    display: none;
   }
 
   /* Removes borders on tables with <class="pdf"> */
@@ -327,7 +347,7 @@
     width: 100%;
     max-height: 150px;
   }
-
+  
   /* Hides grid cards on pdf */
   .md-typeset .grid {
 	  display: none;

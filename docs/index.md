@@ -6,7 +6,7 @@
 <tbody markdown="1">
 <tr markdown="1">
 <td align="center" width="35%" markdown="block">
-[![SparkFun 6DoF - LSM6DSV16X (Qwiic)](https://cdn.sparkfun.com/assets/parts/2/1/4/6/5/21636-_01.jpg){ width=90% }](https://www.sparkfun.com/products/21325)
+[![SparkFun 6DoF - LSM6DSV16X (Qwiic)](https://cdn.sparkfun.com/assets/parts/2/1/1/1/8/21325_6DOF_3.jpg){ width=90% }](https://www.sparkfun.com/products/21325)
 
 
 The [SparkFun 6DoF - LSM6DSV16X (Qwiic)](https://www.sparkfun.com/products/21325) is a Qwiic enabled board based on the LSM6DSV16X from STMicroelectronics. This little chip is a high-performance, low-power 6-axis IMU, featuring a 3-axis digital accelerometer and a 3-axis digital gyroscope, with a triple core for processing acceleration and angular rate data on three separate channels (user interface, OIS, and EIS) with dedicated configuration, processing, and filtering. 
@@ -16,12 +16,12 @@ The [SparkFun 6DoF - LSM6DSV16X (Qwiic)](https://www.sparkfun.com/products/21325
 </center>
 </td>
 <td align="center" width="35%" markdown="block">
-[![SparkFun 6DoF - LSM6DSV16X (Qwiic)](https://cdn.sparkfun.com/assets/parts/2/1/4/6/5/21636-_01.jpg){ width=90% }](https://www.sparkfun.com/products/21325)
+[![SparkFun 6DoF - LSM6DSV16X (Qwiic)](https://cdn.sparkfun.com/assets/parts/2/1/1/4/4/21336_Micro6DOF_3.jpg){ width=90% }](https://www.sparkfun.com/products/21336)
 
-The [SparkFun 6DoF Micro- LSM6DSV16X (Qwiic)](https://www.sparkfun.com/products/21325) is the 1x1's mini-me, containing most of it's elder sibling's functionality in a tiny little package. 
+The [SparkFun 6DoF Micro- LSM6DSV16X (Qwiic)](https://www.sparkfun.com/products/21336) is the 1x1's mini-me, containing most of it's elder sibling's functionality in a tiny little package. 
 
 <center>
-[Purchase from SparkFun :fontawesome-solid-cart-plus:](https://www.sparkfun.com/products/21325){ .md-button .md-button--primary }
+[Purchase from SparkFun :fontawesome-solid-cart-plus:](https://www.sparkfun.com/products/21336){ .md-button .md-button--primary }
 </center>
 </td>
 </tr>
@@ -43,7 +43,7 @@ To follow along with this tutorial, you will need the following materials. You m
 	</div>    
     <div class="card-content">
 		<a href="https://www.sparkfun.com/products/21325">
-			<img alt="SparkFun 6DoF - LSM6DSV16X (Qwiic)" src="https://cdn.sparkfun.com/assets/parts/2/1/4/6/5/21636-_01.jpg" >
+			<img alt="SparkFun 6DoF - LSM6DSV16X (Qwiic)" src="https://cdn.sparkfun.com/assets/parts/2/1/1/1/8/21325_6DOF_3.jpg" >
 		</a>
 	<!-- 
 		<div class="card-footer">
@@ -67,14 +67,15 @@ To follow along with this tutorial, you will need the following materials. You m
 <!--   card 3 -->
   <article class="card">
 	<div class="card-header">
-		<a href="https://www.sparkfun.com/products/15127"><center><b>XBee 3 Pro Module - PCB Antenna</b><br /> WRL-15127</center></a>
+		<a href="https://www.sparkfun.com/products/15123"><center><b>SparkFun RedBoard Qwiic</b><br /> DEV-14743</center></a>
 	</div>    
     <div class="card-content">
-		<a href="https://www.sparkfun.com/products/15127">
-			<img alt="XBee 3 Pro Module - PCB Antenna" src="https://cdn.sparkfun.com//assets/parts/1/3/4/9/9/15127-XBee_3_Pro_Module_-_PCB_Antenna-01.jpg" >
+		<a href="https://www.sparkfun.com/products/15123">
+			<img alt="SparkFun RedBoard Qwiic" src="https://cdn.sparkfun.com/assets/parts/1/3/4/9/2/15123-SparkFun_RedBoard_Qwiic-01a.jpg" >
 		</a>
    </div><!-- .card-content -->
   </article>
+
   </section>
 
 ### Suggested Reading

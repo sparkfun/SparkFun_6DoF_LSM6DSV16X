@@ -1,39 +1,88 @@
 ###Accelerometer - LSM6DSV16X
 
-<figure markdown>
-[![LSM6DSV16X Accelerometer](assets/imgs/21636-XBeeDevBoard-XBeeSocket.jpg){ width="400" }](assets/imgs/21636-XBeeDevBoard-XBeeSocket.jpg "Click to enlarge")
-<figcaption markdown>LSM6DSV16X Accelerometer</figcaption>
-</figure>
+<div class="grid.cards.desc" markdown>
 
-The LSM6DSV16X Accelerometer has three modes: 
+<table class="pdf" style="border-style:none;" markdown="1">
+<tbody markdown="1">
+<tr markdown="1">
+<td align="center" width="35%" markdown="block">
+[![SparkFun 6DoF - LSM6DSV16X (Qwiic)](assets/imgs/21325_SparkFun_LSM6DSV16X_IC.jpg){ width=90% }](assets/imgs/21325_SparkFun_LSM6DSV16X_IC.jpg)
+</td>
+<td align="center" width="35%" markdown="block">
+[![SparkFun 6DoF Micro - LSM6DSV16X (Qwiic)](assets/imgs/21336_SparkFun_Micro_LSM6DSV16X_IC.jpg){ width=40% }](assets/imgs/21336_SparkFun_Micro_LSM6DSV16X_IC.jpg)
+</td>
+</tr>
+</tbody>
+</table>
+</div class>
 
-Mode 1: Periperhal only mode - I2C or SPI
-Mode 2: Sensor hub mode - I2C or SPI with controller I2C port
-Mode 3 and 4: AUX SPI mode I2C and SPI access multi-read
+The LSM6DSV16X Accelerometer has a few different modes: 
+
+* Mode 1: Periperhal only mode - I<sup>2</sup>C or SPI
+* Mode 2: Sensor hub mode - I<sup>2</sup>C or SPI with controller I2C port
+* Mode 3 and 4: AUX SPI mode I<sup>2</sup>C and SPI access multi-read
+
+Mode 1
+This is the default "peripheral only" mode. This mode allows you to use either I<sup>2</sup>C or SPI. By default, I<sup>2</sup>C is enabled with an address of 0x6B. By manipulating the associated jumper, you can change the I<sup>2</sup>C address to 0x6A (cut the power side and close the ground side) or switch to SPI mode (both jumpers open).
+
+Mode 2
+This mode enables a secondary I<sup>2</sup>C port that the 6DoF controls; up to 4 external sensors can be connected to the I<sup>2</sup>C controller interface of the device. External sensors communicate via the SCX and SDX (PICOX) lines - the SCX and SDX jumpers will need to be opened.
+
+Modes 3 & 4
+In addition to the primary I<sup>2</sup>C peripheral interface or SPI (3- / 4-wire) serial interface, an auxiliary SPI (3- / 4-wire) serial interface is available for external device connections (i.e. camera module). Mode 3 is available for gyroscope only, Mode 4 is available for both gyroscope and accelerometer.
+
+
+The analog hub and Qvar functionalities are available in mode 1 with I²C interface only.
+
+
+
+
 
 ###Qwiic Connector
 
 The Qwiic connector(s) on the SparkFun 6DoF - LSM6DSV16X (Qwiic) and SparkFun 6DoF Micro - LSM6DSV16X (Qwiic) provide power and I<sup>2</sup>C connectivity simultaneously.
 
+<div class="grid.cards.desc" markdown>
+
+<table class="pdf" style="border-style:none;" markdown="1">
+<tbody markdown="1">
+<tr markdown="1">
+<td align="center" width="35%" markdown="block">
+[![SparkFun 6DoF - LSM6DSV16X (Qwiic)](assets/imgs/21325_SparkFun_LSM6DSV16X_QwiicConnex.jpg){ width=90% }](assets/imgs/21325_SparkFun_LSM6DSV16X_QwiicConnex.jpg)
+</td>
+<td align="center" width="35%" markdown="block">
+[![SparkFun 6DoF Micro - LSM6DSV16X (Qwiic)](assets/imgs/21336_SparkFun_Micro_LSM6DSV16X_QwiicConnex.jpg){ width=40% }](assets/imgs/21336_SparkFun_Micro_LSM6DSV16X_QwiicConnex.jpg)
+</td>
+</tr>
+</tbody>
+</table>
+</div class>
 
 ###Power
 
 Ideally, power to these boards will be provided by the Qwiic cables. However, should you wish to provide power separately, the 1" x 1" board has its pins broken out to PTH and you can wire up power via these. 
 
+!!! warning
+    <p>Input voltage range should be between 1.71V - 3.6V. </p>
+
+<figure markdown>
+[![LSM6DSV16X Power Pins](assets/imgs/21325_SparkFun_LSM6DSV16X_PowerPins.jpg){ width="400" }](assets/imgs/21325_SparkFun_LSM6DSV16X_PowerPins.jpg" Click to enlarge")
+<figcaption markdown>LSM6DSV16X Power Pins</figcaption>
+</figure>
+
+###GPIO
+
+SPI Pins - 
+  PICO
+  POCI 
+  CS
 
 
-VDD Range: 1.71V - 3.6V
-VDDIO range: 1.62V - 3.6V
+Interrupt Pins
+  INT 1 & INT2
 
 
 
-###I<sup>2</sup>C Address
-
-The SparkFun 6DoF - LSM6DSV16X (Qwiic) has a default I<sup>2</sup>C address of 0x6B, but by cutting the address jumper on the back of the board, you can select 0x6A (GND) or SPI (fully open). 
-
-I2C Address (selectable): 0x6B (default)
-GND 0x6A
-OPEN SPI
 
 ###Jumpers 
 
@@ -43,10 +92,89 @@ OPEN SPI
 Like our other Qwiic boards, the Qwiic 6DoF - LSM6DSV16X boards come equipped with pull-up resistors on the clock and data pins. If you are daisy-chaining multiple Qwiic devices, you will want to cut this jumper; if multiple sensors are connected to the bus with the pull-up resistors enabled, the parallel equivalent resistance will create too strong of a pull-up for the bus to operate correctly. As a general rule of thumb, disable all but one pair of pull-up resistors if multiple devices are connected to the bus. To disable the pull up resistors, use an X-acto knife to cut the joint between the two jumper pads highlighted below.
 
 
+<div class="grid.cards.desc" markdown>
+
+<table class="pdf" style="border-style:none;" markdown="1">
+<tbody markdown="1">
+<tr markdown="1">
+<td align="center" width="35%" markdown="block">
+[![SparkFun 6DoF - LSM6DSV16X (Qwiic)](assets/imgs/21325_SparkFun_LSM6DSV16X_I2CJumper.jpg){ width=90% }](assets/imgs/21325_SparkFun_LSM6DSV16X_I2CJumper.jpg)
+</td>
+<td align="center" width="35%" markdown="block">
+[![SparkFun 6DoF Micro - LSM6DSV16X (Qwiic)](assets/imgs/21336_SparkFun_Micro_LSM6DSV16X_I2CJumper.jpg){ width=40% }](assets/imgs/21336_SparkFun_Micro_LSM6DSV16X_I2CJumper.jpg)
+</td>
+</tr>
+</tbody>
+</table>
+</div class>
+
+
+####I<sup>2</sup>C Address
+
+The SparkFun 6DoF - LSM6DSV16X (Qwiic) boards have a default I<sup>2</sup>C address of 0x6B, but by cutting the address jumper on the back of the board, you can select 0x6A (GND) or SPI (fully open). 
+
+<div class="grid.cards.desc" markdown>
+
+<table class="pdf" style="border-style:none;" markdown="1">
+<tbody markdown="1">
+<tr markdown="1">
+<td align="center" width="35%" markdown="block">
+[![LSM6DSV16X Address Jumpers](assets/imgs/21325_SparkFun_LSM6DSV16X_AddressJumper.jpg){ width=90% }](assets/imgs/21325_SparkFun_LSM6DSV16X_AddressJumper.jpg)
+</td>
+<td align="center" width="35%" markdown="block">
+[![LSM6DSV16X Micro Address Jumpers](assets/imgs/21336_SparkFun_Micro_LSM6DSV16X_AddressJumper.jpg){ width=40% }](assets/imgs/21336_SparkFun_Micro_LSM6DSV16X_AddressJumper.jpg)
+</td>
+</tr>
+</tbody>
+</table>
+</div class>
+
+
+####SDX/SCX
+
+If using Mode 2 (sensor hub mode) or analog capabilities of the sensor, cut both of these traces. Cut SCX and SDX jumpers to utilize analog input capabilities
+
+
+<figure markdown>
+[![LSM6DSV16X SCX/SDX Jumpers](assets/imgs/21325_SparkFun_LSM6DSV16X_SCXSDXJumpers.jpg){ width="400" }](assets/imgs/21325_SparkFun_LSM6DSV16X_SCXSDXJumpers.jpg "Click to enlarge")
+<figcaption markdown>LSM6DSV16X SCX/SDX Jumpers</figcaption>
+</figure>
+
+####Pad Jumpers
+
+When using the Analog In (QVar) functionality, you can select whether P1 is tied to GND or 3v3 using the PAD1 jumper. Similarly, you can select whether P2 is tied to GND or 3v3 using the PAD2 jumper. Refer to the schematic or datasheet for more information. 
+
+<figure markdown>
+[![LSM6DSV16X Pad Jumpers](assets/imgs/21325_SparkFun_LSM6DSV16X_PadJumpers.jpg){ width="400" }](assets/imgs/21325_SparkFun_LSM6DSV16X_PadJumpers.jpg "Click to enlarge")
+<figcaption markdown>LSM6DSV16X Pad Jumpers</figcaption>
+</figure>
 
 ####LED
 
-Let there be light! 
+Let there be light! An LED on the front of each board indicates power is being provided to the board. If you don't like LEDs or you are concerned about current draw, cut the jumper highlighted below. 
+
+
+
+<div class="grid.cards.desc" markdown>
+
+<table class="pdf" style="border-style:none;" markdown="1">
+<tbody markdown="1">
+<tr markdown="1">
+<td align="center" width="35%" markdown="block">
+[![SparkFun 6DoF - LSM6DSV16X (Qwiic)](assets/imgs/21325_SparkFun_LSM6DSV16X_LEDJumper.jpg){ width=90% }](assets/imgs/21325_SparkFun_LSM6DSV16X_LEDJumper.jpg)
+</td>
+<td align="center" width="35%" markdown="block">
+[![SparkFun 6DoF Micro - LSM6DSV16X (Qwiic)](assets/imgs/21336_SparkFun_Micro_LSM6DSV16X_LEDJumper.jpg){ width=40% }](assets/imgs/21336_SparkFun_Micro_LSM6DSV16X_LEDJumper.jpg)
+</td>
+</tr>
+</tbody>
+</table>
+</div class>
+
+
+
+
+
 
 ###Board Outline
 
@@ -68,219 +196,3 @@ The SparkFun 6DoF Micro - LSM6DSV16X (Qwiic) measures 0.3" x 0.75".
 </figure>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-###Power
-USB-C Connectors
-Input VCC Range: 3.3V-4.3V
-
-
-###Qwiic Connector
-
-The Qwiic connector on the SparkFun XBee Development Board provides power and I<sup>2</sup>C connectivity to Qwiic breakout boards. 
-
-<figure markdown>
-[![Qwiic Connector](assets/imgs/21636-XBeeDevBoard-QwiicConnex.jpg){ width="400" }](assets/imgs/21636-XBeeDevBoard-QwiicConnex.jpg "Click to enlarge")
-<figcaption markdown>Qwiic Connector</figcaption>
-</figure>
-
-
-###USB Switch
-
-The USB switch allows you to select between Direct USB and I<sup>2</sup>C. Default is Low (I<sup>2</sup>C/SDA).
-
-<figure markdown>
-[![DUSB I2C Switch](assets/imgs/21636-XBeeDevBoard-DUSB-I2CSwitch.jpg){ width="400" }](assets/imgs/21636-XBeeDevBoard-DUSB-I2CSwitch.jpg "Click to enlarge")
-<figcaption markdown>DUSB I<sup>2</sup>C Switch</figcaption>
-</figure>
-
-###Buck Converter - AP63203
-
-The AP63203 Buck Converter ensures appropriate power supply to the components of the board. VIN range is <b>3.8V-5.5V</b>. Output is 2A max. 
-
-<figure markdown>
-[![DUSB I2C Switch](assets/imgs/21636-XBeeDevBoard-Buck Converter-AP63203.jpg){ width="400" }](assets/imgs/21636-XBeeDevBoard-Buck Converter-AP63203.jpg "Click to enlarge")
-<figcaption markdown>AP63203 Buck Converter</figcaption>
-</figure>
-
-
-###USB to UART Bridge
-
-The FT231XS translates data between your computer and the XBee. This is one of our favorite chips because it supports all computer platforms and it's easy to work with. If this is the first FTDI chip you've ever connected to your computer (it probably won't be your last), there is some driver installation to get out of the way. We've written a tutorial detailing [How to Install FTDI Drivers tutorial](tutorials/74).
-
-<figure markdown>
-[![FT231XS USB to UART Bridge](assets/imgs/21636-XBeeDevBoard-FT231XS.jpg){ width="400" }](assets/imgs/21636-XBeeDevBoard-FT231XS.jpg "Click to enlarge")
-<figcaption markdown>FT231XS USB to UART Bridge</figcaption>
-</figure>
-
-###Lipo Battery Connector
-
-The SparkFun XBee 3 Cat 1 Smart Modem Dev Board includes support for single-cell lithium-polymer (LiPo) batteries, which plug into the board's black 2-pin JST connector. LiPos are perfect for projects on-the-go, or those that just need a little extra oomph. 
-
-<figure markdown>
-[![Battery Connector](assets/imgs/21636-XBeeDevBoard-BatteryConnector.jpg){ width="400" }](assets/imgs/21636-XBeeDevBoard-BatteryConnector.jpg "Click to enlarge")
-<figcaption markdown>Battery Connector</figcaption>
-</figure>
-
-###GPIO
-
-We've broken out the XBee pins to plated through holes on either side of the board. 
-
-<figure markdown>
-[![GPIO](assets/imgs/21636-XBeeDevBoard-GPIO.jpg){ width="400" }](assets/imgs/21636-XBeeDevBoard-GPIO.jpg "Click to enlarge")
-<figcaption markdown>GPIO</figcaption>
-</figure>
-
-###Buttons 
-
-There are two buttons - D0 and RST. 
-
-<figure markdown>
-[![Reset and D0 Buttons](assets/imgs/21636-XBeeDevBoard-ResetandD0Buttons.jpg){ width="400" }](assets/imgs/21636-XBeeDevBoard-ResetandD0Buttons.jpg "Click to enlarge")
-<figcaption markdown>Reset and D0 Buttons</figcaption>
-</figure>
-
-###LEDs
-
-There are three LEDs on the board: 
-
-<figure markdown>
-[![LEDs](assets/imgs/21636-XBeeDevBoard-LEDs.jpg){ width="400" }](assets/imgs/21636-XBeeDevBoard-LEDs.jpg "Click to enlarge")
-<figcaption markdown>LEDs</figcaption>
-</figure>
-
-####PWR
-
-Lights up when power is provided to the board. 
-
-####ASC
-The LED on the development board blinks when the XBee is registered to the cellular network.
-
-
-<table class="tg" align="left">
-  <tr>
-    <th width="20%" align="center"><b>Blink</b></th>
-    <th width="20%" align="center"><b>Timing</b></th>
-    <th width="60%" align="left"><b>Meaning</b></th>
-  </tr>
-  <tr>
-    <td align="center">On</td>
-    <td align="center">Solid</td>
-    <td>Not joined to a mobile network</td>
-  </tr>
-  <tr>
-    <td align="center">Double blink</td>
-    <td align="center">½ second</td>
-    <td>The last TCP/UDP/SMS attempt failed. If the LED has this
-pattern, you may need to check DI (Remote Manager
-Indicator) or CI (Protocol/Connection Indication) for the cause
-of the error.</td>
-  </tr>
-  <tr>
-    <td align="center">Single blink</td>
-    <td align="center">1 second</td>
-    <td>Normal operation</td>
-  </tr>
-</table>
-
-
-####RSSI 
-Received Signal Strength Indicator - When configured, this LED reflects the received signal strength
-
-RSSI PWM
-The RSSI/PWM output is enabled continuously unlike other XBee products where the output is enabled for a short period of time after each received transmission. If running on the XBIB development board, DIO10 is connected to the RSSI LEDs, which may be interpreted as follows:
-
-
-<table class="tg" align="left">
-  <tr>
-    <th width="20%" align="center"><b>PWM duty cycle</b></th>
-    <th width="20%" align="center"><b>Number of LEDs turned on</b></th>
-    <th width="60%" align="left"><b>Received signal strength (dBm)</b></th>
-  </tr>
-  <tr>
-    <td align="center">79.39% or more</td>
-    <td align="center">3</td>
-    <td>-83 dBm or higher</td>
-  </tr>
-  <tr>
-    <td align="center">62.42% to 79.39%</td>
-    <td align="center">2</td>
-    <td align="left"> -93 to -83 dBm</td>
-  </tr>
-  <tr>
-    <td align="center">45.45% to 62.42%</td>
-    <td align="center">1</td>
-    <td align="left">-103 to -93 dBm</td>
-  </tr>
-  <tr>
-    <td align="center">Less than 45.45%</td>
-    <td align="center">0</td>
-    <td align="left">Less than -103 dBm, or no cellular network connection</td>
-  </tr>
-</table>
-
-
-###Jumpers
-
-####SHLD/SHLD1
-
-For most applications, the single point grounding of the Direct USB or UART at the USB-C connector is sufficient. However, should you run into problems with EMI/EMC, we've provided jumpers that allow you to disconnect either connector from ground.
-
-Cut the SHLD jumper for the UART USB-C; cut the SHLD1 jumper for Direct USB. 
-
-<figure markdown>
-[![Shield Jumpers](assets/imgs/21636-XBeeDevBoard-Jumper-ShldandShld1.jpg){ width="400" }](assets/imgs/21636-XBeeDevBoard-Jumper-ShldandShld1.jpg "Click to enlarge")
-<figcaption markdown>Shield Jumpers</figcaption>
-</figure>
-
-
-####ALED/PLED
-
-If power consumption is an issue (or if you just don't like the LEDs), cut the respective jumper to sever power to the LED. 
-
-* PLED: Red
-* ALED: Blue
-
-<figure markdown>
-[![LED Jumpers](assets/imgs/21636-XBeeDevBoard-Jumper-LEDs.jpg){ width="400" }](assets/imgs/21636-XBeeDevBoard-Jumper-LEDs.jpg "Click to enlarge")
-<figcaption markdown>LED Jumpers</figcaption>
-</figure>
-
-####I2C 
-
-The I<sup>2</sup>C jumper pulls the SDA and SCL pins to VDD (normally 3.3V) through two 2.2K Ohm resistors. If you have multiple Qwiic devices on the same bus you may want to disable these by opening the jumper (assuming they are also operating at 3.3V logic).
-
-
-<figure markdown>
-[![I2C Jumper](assets/imgs/21636-XBeeDevBoard-Jumper-I2C.jpg){ width="400" }](assets/imgs/21636-XBeeDevBoard-Jumper-I2C.jpg "Click to enlarge")
-<figcaption markdown>I<sup>2</sup>C Jumper</figcaption>
-</figure>
-
-
-###Board Outline
-
-The overall size of the SparkFun XBee Development Board is 1.8" by 2.5". For specific measurements, see the image below. 
-
-
-<figure markdown>
-[![Board Outline](assets/BoardFiles/21636-SparkFun_XBee3_Cat1_Smart_Modem-BoardOutline.png){ width="600" }](assets/BoardFiles/21636-SparkFun_XBee3_Cat1_Smart_Modem-BoardOutline.png "Click to enlarge")
-<figcaption markdown>Board Outline</figcaption>
-</figure>
