@@ -2,7 +2,7 @@ name: Run mkdocs
 on:
   push:
     branches:
-      - docs
+      - main
 
 permissions:
   contents: write
@@ -19,7 +19,7 @@ jobs:
           python-version: 3.x
 
       - name: Install Python dependencies
-        run: pip install mkdocs-monorepo-plugin mkdocs-redirects mkdocs-with-pdf mkdocs-git-authors-plugin mkdocs-git-revision-date-localized-plugin mkdocs-git-committers-plugin-2
+        run: pip install mkdocs-monorepo-plugin mkdocs-redirects mkdocs-with-pdf weasyprint mkdocs-git-authors-plugin mkdocs-git-revision-date-localized-plugin mkdocs-git-committers-plugin-2
 
       # - name: Install Chrome
       #   run: sudo apt install google-chrome-stable
