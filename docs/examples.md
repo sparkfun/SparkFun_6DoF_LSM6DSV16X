@@ -29,7 +29,7 @@ Make sure you've selected the correct board and port in the Tools menu and then 
 
 ###Example 2: Interrupt
 
-This example shows the basic settings and functions for retrieving accelerometer data. In addition we're setting the data ready signal to interrupt pin one in an active high configuration and show additional ways in which the interrupts can be configured.  To find Example 2, go to **File** > **Examples** > **SparkFun 6DoF LSM6DSV16X** > **example2_interrupt**. 
+This example shows the basic settings and functions for retrieving accelerometer data. In addition we're setting the data ready signal to interrupt pin one in an active high configuration and show additional ways in which the interrupts can be configured. To find Example 2, go to **File** > **Examples** > **SparkFun 6DoF LSM6DSV16X** > **example2_interrupt**. 
 
 <figure markdown>
 [![LSM6DSV16X Arduino Example 2](assets/imgs/Example2_Menu.jpg){ width="90%" }](assets/imgs/Example2_Menu.jpg "Click to enlarge")
@@ -48,6 +48,13 @@ Alternatively, you can expand the link below and copy and paste the code into a 
 <!-- 
 	https://github.com/sparkfun/SparkFun_LSM6DSV16X_Arduino_Library/blob/main/examples/example2_interrupt/example2_interrupt.ino
 -->
+
+Your setup should resemble something like this: 
+
+<figure markdown>
+[![LSM6DSV16X Arduino Example 2](assets/imgs/Example2_Wiring.jpg){ width="90%" }](assets/imgs/Example2_Wiring.jpg "Click to enlarge")
+<figcaption markdown>Example 2</figcaption>
+</figure>
 
 Again, make sure you've selected the correct board and port in the Tools menu and then hit the upload button. Once the code has finished uploading, go ahead and open a [Serial Monitor](https://learn.sparkfun.com/tutorials/terminal-basics). You should see something similar to the following.
 
@@ -72,12 +79,46 @@ Alternatively, you can expand the link below and copy and paste the code into a 
 	--8<-- "https://raw.githubusercontent.com/sparkfun/SparkFun_STTS22H_Arduino_Library/main/examples/example1-basic/example1-basic.ino"
 	```
 
+The wiring for this example is fairly straight forward, if somewhat ugly. Here's what it looks like:
+
+<figure markdown>
+[![LSM6DSV16X Arduino Example 3](assets/imgs/Example3_Wiring.jpg){ width="90%" }](assets/imgs/Example3_Wiring.jpg "Click to enlarge")
+<figcaption markdown>Example 3</figcaption>
+</figure>
+
+
+And here are the connections:
+<center>
+<table>
+    <th colspan="2" align="center"><b>Pin Connections</b></th>
+    <tr align="center">
+        <td><b>Qwiic Breakout Pin</b></td>
+        <td><b>RedBoard Pin</b></td>    
+    </tr>   
+    <tr align="center">
+        <td>PICO</td>
+        <td>11</td>
+    </tr>
+    <tr align="center">
+        <td>POCI</td>
+        <td>12</td>       
+    </tr> 
+    <tr align="center">
+        <td>SCLK</td>
+        <td>13</td>
+    </tr>
+    <tr align="center"> 
+        <td>CS</td> 
+        <td>A4</td>
+    </tr>
+</table>
+</center>
 
 <!-- 
 	https://github.com/sparkfun/SparkFun_LSM6DSV16X_Arduino_Library/blob/main/examples/example3_spi/example3_spi.ino
 -->
 
-
+<!-- Starting comment of example 4
 ###Example 4: Basic Readings
 
  This example shows how to retrieve accelerometer and gyroscopic data as fast as the I2C bus will allow.
@@ -104,7 +145,7 @@ Alternatively, you can expand the link below and copy and paste the code into a 
 <!-- 
 	https://github.com/sparkfun/SparkFun_LSM6DSV16X_Arduino_Library/blob/main/examples/example4_faster_I2C/example4_faster_I2C.ino
 -->
-
+<!-- Starting comment of example 5
 
 ###Example 5: Basic Readings
 
