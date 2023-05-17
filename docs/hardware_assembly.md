@@ -1,4 +1,4 @@
-The delightful thing about our Qwiic boards is that they are literally plug and play. 
+The delightful thing about our Qwiic boards is that they are quite literally plug and play. 
 
 
 <figure markdown>

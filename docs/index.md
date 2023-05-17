@@ -55,11 +55,11 @@ To follow along with this tutorial, you will need the following materials. You m
 <!--   card 2 -->
   <article class="card">
 	<div class="card-header">
-		<a href="https://www.sparkfun.com/products/14743"><center><b>USB 3.1 Cable A to C - 3 Foot</b><br /> CAB-14743</center></a>
+		<a href="https://www.sparkfun.com/products/21336"><center><b>SparkFun 6DoF Micro- LSM6DSV16X (Qwiic)</b><br /> SEN-21336</center></a>
 	</div>    
     <div class="card-content">
-		<a href="https://www.sparkfun.com/products/14743">
-			<img alt="USB 3.1 Cable A to C - 3 Foot" src="https://cdn.sparkfun.com/assets/parts/1/2/9/7/2/14743-USB_3.1_Cable_A_to_C_-_3_Foot-01.jpg" >
+		<a href="https://www.sparkfun.com/products/21336">
+			<img alt="USB 3.1 Cable A to C - 3 Foot" src="https://cdn.sparkfun.com/assets/parts/2/1/1/4/4/21336_Micro6DOF_3.jpg" >
 		</a>
    </div><!-- .card-content -->
   </article>
@@ -75,6 +75,32 @@ To follow along with this tutorial, you will need the following materials. You m
 		</a>
    </div><!-- .card-content -->
   </article>
+
+<!--   card 4 -->
+  <article class="card">
+	<div class="card-header">
+		<a href="https://www.sparkfun.com/products/14427"><center><b>Qwiic Cable - 100mm</b><br /> PRT-14427</center></a>
+	</div>    
+    <div class="card-content">
+		<a href="https://www.sparkfun.com/products/14427">
+			<img alt="Qwiic Cable - 100mm" src="https://cdn.sparkfun.com//assets/parts/1/2/4/5/3/14427-Qwiic_Cable_-_100mm-01.jpg" >
+		</a>
+   </div><!-- .card-content -->
+  </article>
+
+<!--   card 5 -->
+  <article class="card">
+	<div class="card-header">
+		<a href="https://www.sparkfun.com/products/14743"><center><b>USB 3.1 Cable A to C - 3 Foot</b><br /> CAB-14743</center></a>
+	</div>    
+    <div class="card-content">
+		<a href="https://www.sparkfun.com/products/14743">
+			<img alt="USB 3.1 Cable A to C - 3 Foot" src="https://cdn.sparkfun.com/assets/parts/1/2/9/7/2/14743-USB_3.1_Cable_A_to_C_-_3_Foot-01.jpg" >
+		</a>
+   </div><!-- .card-content -->
+  </article>
+
+
 
   </section>
 

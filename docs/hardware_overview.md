@@ -88,11 +88,11 @@ If you do not want to use the Qwiic connectors, I<sup>2</sup>C functionality has
 
 Primary SPI functionality has been broken out to the highlighted pins below. 
 
+
 <figure markdown>
 [![LSM6DSV16X SPI Pins](assets/imgs/21325_SparkFun_LSM6DSV16X_SPIPins.jpg){ width="400" }](assets/imgs/21325_SparkFun_LSM6DSV16X_SPIPins.jpg" Click to enlarge")
 <figcaption markdown>LSM6DSV16X SPI Pins</figcaption>
 </figure>
-
 
 Auxiliary SPI is available via AH1, AH2, and OCS. 
 
@@ -101,9 +101,19 @@ Auxiliary SPI is available via AH1, AH2, and OCS.
 <figcaption markdown>LSM6DSV16X Aux SPI Pins</figcaption>
 </figure>
 
+#### AH1/AH2
+
+The LSM6DSV16X embeds Qvar functionality, which is an electrostatic sensor able to measure the variation of the quasi-electrostatic potential. The Qvar sensing channel can be used for user interface applications like tap, double tap, triple tap, long press, and L/R – R/L swipe. Functionality is accessed via the AH1 and AH2 pins. For more information, refer to STMicroelectronics' [Qvar Sensing Channel Application Notes](https://www.st.com/resource/en/application_note/an5755-qvar-sensing-channel--stmicroelectronics.pdf). 
+
+<figure markdown>
+[![LSM6DSV16X Aux SPI Pins](assets/imgs/21325_SparkFun_LSM6DSV16X_QvarPins.jpg){ width="400" }](assets/imgs/21325_SparkFun_LSM6DSV16X_QvarPins.jpg" Click to enlarge")
+<figcaption markdown>LSM6DSV16X Qvar Pins</figcaption>
+</figure>
+
+
 #### Interrupt Pins
 
-Interrupt functionality is available via the INT pins. There are two interrupts available on the 1x1" board, and 1 interrupt available on the Micro. 
+Interrupt functionality is available via the INT pins. There are two interrupts available on the 1x1" board, and 1 interrupt available on the Micro. These pins are configurable to be high or low. 
 
 <div class="grid.cards.desc" markdown>
 
@@ -179,7 +189,7 @@ If using either Mode 2 (sensor hub mode) or the analog capabilities of the senso
 
 ####Pad Jumpers
 
-When using the Analog In (QVar) functionality, you can select whether P1 is tied to GND or 3v3 using the PAD1 jumper. Similarly, you can select whether P2 is tied to GND or 3v3 using the PAD2 jumper. Refer to either the [schematic](assets/BoardFiles/SparkFun_6DoF_LSM6DSV16X-Schematic.pdf) or the [datasheet](assets/BoardFiles/lsm6dsv16x.pdf) for more information. 
+When using the Analog In (QVar) functionality, you can select whether P1 is tied to GND or 3v3 using the PAD1 jumper. Similarly, you can select whether P2 is tied to GND or 3v3 using the PAD2 jumper. Refer to either the [application notes](https://www.st.com/en/mems-and-sensors/lsm6dsv16x.html#documentation) for more information. 
 
 <figure markdown>
 [![LSM6DSV16X Pad Jumpers](assets/imgs/21325_SparkFun_LSM6DSV16X_PadJumpers.jpg){ width="400" }](assets/imgs/21325_SparkFun_LSM6DSV16X_PadJumpers.jpg "Click to enlarge")
