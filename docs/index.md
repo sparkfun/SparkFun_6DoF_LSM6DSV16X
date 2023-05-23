@@ -16,7 +16,7 @@ The [SparkFun 6DoF - LSM6DSV16X (Qwiic)](https://www.sparkfun.com/products/21325
 </center>
 </td>
 <td align="center" width="35%" markdown="block">
-[![SparkFun 6DoF - LSM6DSV16X (Qwiic)](https://cdn.sparkfun.com/assets/parts/2/1/1/4/4/21336_Micro6DOF_3.jpg){ width=90% }](https://www.sparkfun.com/products/21336)
+[![SparkFun Micro 6DoF - LSM6DSV16X (Qwiic)](https://cdn.sparkfun.com/assets/parts/2/1/1/4/4/21336_Micro6DOF_3.jpg){ width=90% }](https://www.sparkfun.com/products/21336)
 
 The [SparkFun 6DoF Micro- LSM6DSV16X (Qwiic)](https://www.sparkfun.com/products/21336) is the 1x1's mini-me, containing most of it's elder sibling's functionality in a tiny little package. 
 

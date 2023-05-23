@@ -52,7 +52,7 @@ Alternatively, you can expand the link below and copy and paste the code into a 
 Your setup should resemble something like this: 
 
 <figure markdown>
-[![LSM6DSV16X Arduino Example 2](assets/imgs/Example2_Wiring.jpg){ width="90%" }](assets/imgs/Example2_Wiring.jpg "Click to enlarge")
+[![LSM6DSV16X Arduino Example 2](assets/imgs/Example2_WiringTake2.jpg){ width="90%" }](assets/imgs/Example2_WiringTake2.jpg "Click to enlarge")
 <figcaption markdown>Example 2</figcaption>
 </figure>
 
@@ -82,10 +82,9 @@ Alternatively, you can expand the link below and copy and paste the code into a 
 The wiring for this example is fairly straight forward, if somewhat ugly. Here's what it looks like:
 
 <figure markdown>
-[![LSM6DSV16X Arduino Example 3](assets/imgs/Example3_Wiring.jpg){ width="90%" }](assets/imgs/Example3_Wiring.jpg "Click to enlarge")
+[![LSM6DSV16X Arduino Example 3](assets/imgs/Example3_WiringTake2.jpg){ width="90%" }](assets/imgs/Example3_WiringTake2.jpg "Click to enlarge")
 <figcaption markdown>Example 3</figcaption>
 </figure>
-
 
 And here are the connections:
 <center>
@@ -113,6 +112,22 @@ And here are the connections:
     </tr>
 </table>
 </center>
+
+
+Once you get the correct port and board selected and the code is uploaded, you should see something like the following: 
+
+<figure markdown>
+[![LSM6DSV16X Arduino Example 3 Output](assets/imgs/Example3_Output.jpg){ width="90%" }](assets/imgs/Example3_Output.jpg "Click to enlarge")
+<figcaption markdown>Example 3 Output</figcaption>
+</figure>
+
+!!! attention
+	If you are using the SparkFun RedBoard Qwiic and your output only says "Reset. Applying Settings." with no other output, make sure that you have your I/O jumper set correctly. You'll find the 3V3 vs 5V jumper on the front of the RedBoard Qwiic. You'll need to cut the connective trace to 5V and solder the center jumper pad to the 3V3 pad. More information can be found in the [RedBoard Qwiic Hookup Guide](https://learn.sparkfun.com/tutorials/redboard-qwiic-hookup-guide/all#hardware-overview). 
+
+	<figure markdown>
+	[![3V3/5V Jumper on the RedBoard](assets/imgs/Qwiic_Redboard_-_IO_Jumper.jfif){ width="90%" }](assets/imgs/Qwiic_Redboard_-_IO_Jumper.jfif "Click to enlarge")
+	<figcaption markdown>3V3/5V Jumper on the RedBoard</figcaption>
+	</figure>
 
 <!-- 
 	https://github.com/sparkfun/SparkFun_LSM6DSV16X_Arduino_Library/blob/main/examples/example3_spi/example3_spi.ino
