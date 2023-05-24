@@ -52,13 +52,16 @@ Alternatively, you can expand the link below and copy and paste the code into a 
 Your setup should resemble something like this: 
 
 <figure markdown>
-[![LSM6DSV16X Arduino Example 2](assets/imgs/Example2_WiringTake2.jpg){ width="90%" }](assets/imgs/Example2_WiringTake2.jpg "Click to enlarge")
+[![LSM6DSV16X Arduino Example 2](assets/imgs/Example2_Wiring.jpg){ width="90%" }](assets/imgs/Example2_Wiring.jpg "Click to enlarge")
 <figcaption markdown>Example 2</figcaption>
 </figure>
 
-Again, make sure you've selected the correct board and port in the Tools menu and then hit the upload button. Once the code has finished uploading, go ahead and open a [Serial Monitor](https://learn.sparkfun.com/tutorials/terminal-basics). You should see something similar to the following.
+Make sure your code matches the pin you've selected as the interrupt pin. Here Pin 2 is wired as the interrupt pin on the RedBoard, so the code was modified to reflect that. Again, make sure you've selected the correct board and port in the Tools menu and then hit the upload button. Once the code has finished uploading, go ahead and open a [Serial Monitor](https://learn.sparkfun.com/tutorials/terminal-basics). You should see something similar to the following.
 
-
+<figure markdown>
+[![LSM6DSV16X Arduino Example 2 Output](assets/imgs/Example2_Output.jpg){ width="90%" }](assets/imgs/Example2_Output.jpg "Click to enlarge")
+<figcaption markdown>Example 2 Output</figcaption>
+</figure>
 
 
 
