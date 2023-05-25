@@ -59,7 +59,7 @@ To follow along with this tutorial, you will need the following materials. You m
 	</div>    
     <div class="card-content">
 		<a href="https://www.sparkfun.com/products/21336">
-			<img alt="USB 3.1 Cable A to C - 3 Foot" src="https://cdn.sparkfun.com/assets/parts/2/1/1/4/4/21336_Micro6DOF_3.jpg" >
+			<img alt="SparkFun 6DoF Micro- LSM6DSV16X (Qwiic)" src="https://cdn.sparkfun.com/assets/parts/2/1/1/4/4/21336_Micro6DOF_3.jpg" >
 		</a>
    </div><!-- .card-content -->
   </article>

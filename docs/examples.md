@@ -12,12 +12,8 @@ Alternatively, you can expand the link below and copy and paste the code into a 
 
 ??? "Example 1 Arduino Code"
 	```
-	--8<-- "https://raw.githubusercontent.com/sparkfun/SparkFun_STTS22H_Arduino_Library/main/examples/example1-basic/example1-basic.ino"
+	--8<-- "https://raw.githubusercontent.com/sparkfun/SparkFun_LSM6DSV16X_Arduino_Library/main/examples/example1_basic/example1_basic.ino"
 	```
-
-<!-- 
-	https://github.com/sparkfun/SparkFun_LSM6DSV16X_Arduino_Library/blob/main/examples/example1_basic/example1_basic.ino
--->
 
 Make sure you've selected the correct board and port in the Tools menu and then hit the upload button. Once the code has finished uploading, go ahead and open a [Serial Monitor](https://learn.sparkfun.com/tutorials/terminal-basics). You should see something similar to the following. Note the obvious changes where the sensor was turned upright. 
 
@@ -41,13 +37,8 @@ Alternatively, you can expand the link below and copy and paste the code into a 
 
 ??? "Example 2 Arduino Code"
 	```
-	--8<-- "https://raw.githubusercontent.com/sparkfun/SparkFun_STTS22H_Arduino_Library/main/examples/example1-basic/example1-basic.ino"
+	--8<-- "https://raw.githubusercontent.com/sparkfun/SparkFun_LSM6DSV16X_Arduino_Library/main/examples/example2_interrupt/example2_interrupt.ino"
 	```
-
-
-<!-- 
-	https://github.com/sparkfun/SparkFun_LSM6DSV16X_Arduino_Library/blob/main/examples/example2_interrupt/example2_interrupt.ino
--->
 
 Your setup should resemble something like this: 
 
@@ -79,7 +70,7 @@ Alternatively, you can expand the link below and copy and paste the code into a 
 
 ??? "Example 3 Arduino Code"
 	```
-	--8<-- "https://raw.githubusercontent.com/sparkfun/SparkFun_STTS22H_Arduino_Library/main/examples/example1-basic/example1-basic.ino"
+	--8<-- "https://raw.githubusercontent.com/sparkfun/SparkFun_LSM6DSV16X_Arduino_Library/main/examples/example3_spi/example3_spi.ino"
 	```
 
 The wiring for this example is fairly straight forward, if somewhat ugly. Here's what it looks like:
@@ -135,6 +126,12 @@ Once you get the correct port and board selected and the code is uploaded, you s
 <!-- 
 	https://github.com/sparkfun/SparkFun_LSM6DSV16X_Arduino_Library/blob/main/examples/example3_spi/example3_spi.ino
 -->
+
+
+### Further Examples
+
+There are a few more examples in the library that get you started with I<sup>2</sup>C speeds, Qvar, and single/double tap. Feel free to explore and play with these examples to maximize your use of the SparkFun 6DoF - LSM6DSV16X (Qwiic) or  SparkFun Micro 6DoF - LSM6DSV16X (Qwiic)!
+
 
 <!-- Starting comment of example 4
 ###Example 4: Basic Readings
