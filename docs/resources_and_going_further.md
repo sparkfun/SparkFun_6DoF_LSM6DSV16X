@@ -6,7 +6,7 @@ SparkFun 6DoF LSM6DSV16X 1"x1" Board:
 * [Eagle Files](assets/BoardFiles/SparkFun_6DoF_LSM6DSV16X-EagleFiles.zip)
 * [Board Outline (PNG)](assets/BoardFiles/SparkFun_6DoF_LSM6DSV16X-BoardOutline.png){:target="_blank"}
 * [GitHub Hardware Repo](https://github.com/sparkfun/SparkFun_6DoF_LSM6DSV16X){:target="_blank"}
-
+* [GitHub Arduino Library Repo](https://github.com/sparkfun/SparkFun_LSM6DSV16X_Arduino_Library)
 
 SparkFun 6DoF LSM6DSV16X Micro Board: 
 
@@ -14,6 +14,7 @@ SparkFun 6DoF LSM6DSV16X Micro Board:
 * [Eagle Files](assets/BoardFiles/SparkFun_Micro_6DoF_LSM6DSV16X-EagleFiles.zip)
 * [Board Outline (PNG)](assets/BoardFiles/SparkFun_Micro_6DoF_LSM6DSV16X-BoardOutline.png){:target="_blank"}
 * [GitHub Hardware Repo](https://github.com/sparkfun/SparkFun_6DoF_LSM6DSV16X){:target="_blank"}
+* [GitHub Arduino Library Repo](https://github.com/sparkfun/SparkFun_LSM6DSV16X_Arduino_Library)
 
 Or check out other [Qwiic Sensor Tutorials](https://learn.sparkfun.com/tutorials/tags/qwiic):
 
