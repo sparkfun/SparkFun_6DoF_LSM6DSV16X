@@ -1,0 +1,2089 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A hookup guide for the SparkFun Development Board Board">
+      
+      
+      
+        <link rel="canonical" href="https://sparkfun.github.io/SparkFun_6DoF_LSM6DSV16X/single_page/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15+insiders-4.35.3">
+    
+    
+      
+        <title>Introduction - SparkFun 6DoF - LSM6DSV16X (Qwiic) Hookup Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.cac7c1ad.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ecc776e4.min.css">
+      
+      
+  
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/></svg>');--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M2.5 1.75v11.5c0 .138.112.25.25.25h3.17a.75.75 0 0 1 0 1.5H2.75A1.75 1.75 0 0 1 1 13.25V1.75C1 .784 1.784 0 2.75 0h8.5C12.216 0 13 .784 13 1.75v7.736a.75.75 0 0 1-1.5 0V1.75a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13.274 9.537v-.001l-4.557 4.45a.75.75 0 0 1-1.055-.008l-1.943-1.95a.75.75 0 0 1 1.062-1.058l1.419 1.425 4.026-3.932a.75.75 0 1 1 1.048 1.074ZM4.75 4h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM4 7.75A.75.75 0 0 1 4.75 7h2a.75.75 0 0 1 0 1.5h-2A.75.75 0 0 1 4 7.75Z"/></svg>');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/></svg>');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.307 5.476c-.756.134-1.975-.615-2.59-1.362-.755-.922-.66-1.647-.071-2.29.883-.978 2.396-.6 2.396-.6s-2.772-2.432-5.658-.44c-2.571 1.77-1.833 4.183.487 6.288 2.09 1.902.42 3.988-1.686 3.717-1.443-.184-2.034-1.343-1.687-2.054.298-.608 1.335-.982 1.335-.982s-1.19-.484-2.592.044c-1.259.474-2.297 1.515-2.214 4.12V24s1.301-1.604 2.83-3.236c1.714-1.84 2.495-3.084 4.254-2.938 3.328.205 5.735-1.273 7.371-3.645 3.141-4.563.67-9.68-1.43-10.343 0 0 .34 1.438-.745 1.638z"/></svg>');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.92 6.085h.001a.749.749 0 1 1-1.342-.67c.169-.339.436-.701.849-.977C6.845 4.16 7.369 4 8 4a2.756 2.756 0 0 1 1.637.525c.503.377.863.965.863 1.725 0 .448-.115.83-.329 1.15-.205.307-.47.513-.692.662-.109.072-.22.138-.313.195l-.006.004a6.24 6.24 0 0 0-.26.16.952.952 0 0 0-.276.245.75.75 0 0 1-1.248-.832c.184-.264.42-.489.692-.661.103-.067.207-.132.313-.195l.007-.004c.1-.061.182-.11.258-.161a.969.969 0 0 0 .277-.245C8.96 6.514 9 6.427 9 6.25a.612.612 0 0 0-.262-.525A1.27 1.27 0 0 0 8 5.5c-.369 0-.595.09-.74.187a1.01 1.01 0 0 0-.34.398ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/></svg>');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/></svg>');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M2.344 2.343h-.001a8 8 0 0 1 11.314 11.314A8.002 8.002 0 0 1 .234 10.089a8 8 0 0 1 2.11-7.746Zm1.06 10.253a6.5 6.5 0 1 0 9.108-9.275 6.5 6.5 0 0 0-9.108 9.275ZM6.03 4.97 8 6.94l1.97-1.97a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l1.97 1.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-1.97 1.97a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L6.94 8 4.97 6.03a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018Z"/></svg>');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M9.504.43a1.516 1.516 0 0 1 2.437 1.713L10.415 5.5h2.123c1.57 0 2.346 1.909 1.22 3.004l-7.34 7.142a1.249 1.249 0 0 1-.871.354h-.302a1.25 1.25 0 0 1-1.157-1.723L5.633 10.5H3.462c-1.57 0-2.346-1.909-1.22-3.004L9.503.429Zm1.047 1.074L3.286 8.571A.25.25 0 0 0 3.462 9H6.75a.75.75 0 0 1 .694 1.034l-1.713 4.188 6.982-6.793A.25.25 0 0 0 12.538 7H9.25a.75.75 0 0 1-.683-1.06l2.008-4.418.003-.006a.036.036 0 0 0-.004-.009l-.006-.006-.008-.001c-.003 0-.006.002-.009.004Z"/></svg>');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4.72.22a.75.75 0 0 1 1.06 0l1 .999a3.488 3.488 0 0 1 2.441 0l.999-1a.748.748 0 0 1 1.265.332.75.75 0 0 1-.205.729l-.775.776c.616.63.995 1.493.995 2.444v.327c0 .1-.009.197-.025.292.408.14.764.392 1.029.722l1.968-.787a.75.75 0 0 1 .556 1.392L13 7.258V9h2.25a.75.75 0 0 1 0 1.5H13v.5c0 .409-.049.806-.141 1.186l2.17.868a.75.75 0 0 1-.557 1.392l-2.184-.873A4.997 4.997 0 0 1 8 16a4.997 4.997 0 0 1-4.288-2.427l-2.183.873a.75.75 0 0 1-.558-1.392l2.17-.868A5.036 5.036 0 0 1 3 11v-.5H.75a.75.75 0 0 1 0-1.5H3V7.258L.971 6.446a.75.75 0 0 1 .558-1.392l1.967.787c.265-.33.62-.583 1.03-.722a1.677 1.677 0 0 1-.026-.292V4.5c0-.951.38-1.814.995-2.444L4.72 1.28a.75.75 0 0 1 0-1.06Zm.53 6.28a.75.75 0 0 0-.75.75V11a3.5 3.5 0 1 0 7 0V7.25a.75.75 0 0 0-.75-.75ZM6.173 5h3.654A.172.172 0 0 0 10 4.827V4.5a2 2 0 1 0-4 0v.327c0 .096.077.173.173.173Z"/></svg>');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M5 5.782V2.5h-.25a.75.75 0 0 1 0-1.5h6.5a.75.75 0 0 1 0 1.5H11v3.282l3.666 5.76C15.619 13.04 14.543 15 12.767 15H3.233c-1.776 0-2.852-1.96-1.899-3.458Zm-2.4 6.565a.75.75 0 0 0 .633 1.153h9.534a.75.75 0 0 0 .633-1.153L12.225 10.5h-8.45ZM9.5 2.5h-3V6c0 .143-.04.283-.117.403L4.73 9h6.54L9.617 6.403A.746.746 0 0 1 9.5 6Z"/></svg>');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1.75 2.5h10.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5Zm4 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5Zm0 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5ZM2.5 7.75v6a.75.75 0 0 1-1.5 0v-6a.75.75 0 0 1 1.5 0Z"/></svg>');--md-admonition-icon--github:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>');--md-admonition-icon--arduino:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.82 12a5.78 5.78 0 0 0-5.88-5.67c-.29 0-.6.02-.9.05-2.52.37-4.2 2.18-5.13 3.57-.95-1.39-2.64-3.2-5.14-3.57-.3-.03-.6-.05-.9-.05A5.78 5.78 0 0 0 0 12a5.78 5.78 0 0 0 5.87 5.67c.3 0 .6-.02.92-.06 2.52-.36 4.2-2.17 5.14-3.56.95 1.39 2.63 3.2 5.14 3.57.31.03.6.05.91.05A5.78 5.78 0 0 0 23.82 12zM6.48 15.6c-.2.04-.43.04-.63.04A3.77 3.77 0 0 1 2 11.98a3.78 3.78 0 0 1 3.86-3.66c.2 0 .42.02.63.04 2.37.35 3.82 2.67 4.31 3.62-.5.95-1.95 3.3-4.31 3.62zM13 12c.49-.93 1.94-3.27 4.31-3.62.2-.04.42-.04.62-.04A3.76 3.76 0 0 1 21.8 12a3.78 3.78 0 0 1-3.86 3.66c-.2 0-.42-.02-.62-.04-2.36-.35-3.82-2.69-4.31-3.62zm-8.79.59h3.54v-1.16H4.22v1.16zm14.13 0h1.19v-1.16h-1.2v-1.19H17.2v1.2H16v1.15h1.2v1.18h1.15V12.6zM24 7.06c0 .3-.22.51-.53.51a.51.51 0 0 1-.53-.5c0-.28.24-.52.53-.52.31 0 .53.22.53.51zm-.91 0c0 .22.16.4.4.4.22 0 .38-.18.38-.4s-.16-.4-.38-.4c-.24-.02-.4.16-.4.4zm.3.26h-.1V6.8l.2-.01c.09 0 .14.01.18.03.04.02.06.06.06.11 0 .06-.04.1-.11.11.05.02.07.06.09.13l.03.13h-.12c-.02-.02-.02-.07-.04-.13-.02-.05-.04-.07-.11-.07h-.05l-.02.22zm.02-.3h.06c.07 0 .1-.01.1-.07 0-.05-.03-.07-.1-.07h-.07v.14h.01z"/></svg>');--md-admonition-icon--python:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.25.18.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"/></svg>');--md-admonition-icon--code:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M64 464c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16h160v80c0 17.7 14.3 32 32 32h80v288c0 8.8-7.2 16-16 16H64zM64 0C28.7 0 0 28.7 0 64v384c0 35.3 28.7 64 64 64h256c35.3 0 64-28.7 64-64V154.5c0-17-6.7-33.3-18.7-45.3l-90.6-90.5C262.7 6.7 246.5 0 229.5 0H64zm97 289c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0L79 303c-9.4 9.4-9.4 24.6 0 33.9l48 48c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-31-31 31-31zm96-34c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l31 31-31 31c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l48-48c9.4-9.4 9.4-24.6 0-33.9l-48-48z"/></svg>');--md-admonition-icon--terminal:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25ZM7.25 8a.749.749 0 0 1-.22.53l-2.25 2.25a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L5.44 8 3.72 6.28a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l2.25 2.25c.141.14.22.331.22.53Zm1.5 1.5h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1 0-1.5Z"/></svg>');--md-admonition-icon--serial:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M64 0C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h176l-10.7 32H160c-17.7 0-32 14.3-32 32s14.3 32 32 32h256c17.7 0 32-14.3 32-32s-14.3-32-32-32h-69.3L336 416h176c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64zm448 64v288H64V64h448z"/></svg>');--md-admonition-icon--link:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"/></svg>');}</style>
+
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../overrides/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="SparkFun 6DoF - LSM6DSV16X (Qwiic) Hookup Guide" class="md-header__button md-logo" aria-label="SparkFun 6DoF - LSM6DSV16X (Qwiic) Hookup Guide" data-md-component="logo">
+      
+  <img src="../assets/sfe_logo_sm.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SparkFun 6DoF - LSM6DSV16X (Qwiic) Hookup Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introduction
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="red"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="red"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="grey" data-md-color-accent="red"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/sparkfun/SparkFun_6DoF_LSM6DSV16X" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sparkfun/SparkFun_6DoF_LSM6DSV16X/
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href=".." class="md-tabs__link">
+          
+  
+  Hookup Guide
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../resources_and_going_further/" class="md-tabs__link">
+          
+  
+  Hardware Resources
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../troubleshooting/" class="md-tabs__link">
+          
+  
+  Support
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SparkFun 6DoF - LSM6DSV16X (Qwiic) Hookup Guide" class="md-nav__button md-logo" aria-label="SparkFun 6DoF - LSM6DSV16X (Qwiic) Hookup Guide" data-md-component="logo">
+      
+  <img src="../assets/sfe_logo_sm.png" alt="logo">
+
+    </a>
+    SparkFun 6DoF - LSM6DSV16X (Qwiic) Hookup Guide
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/sparkfun/SparkFun_6DoF_LSM6DSV16X" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sparkfun/SparkFun_6DoF_LSM6DSV16X/
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    
+  
+    Hookup Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hookup Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hardware_overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hardware_assembly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware Assembly
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../software_setup_and_programming/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Software Setup and Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware Resources
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hardware Resources
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources_and_going_further/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    
+  
+    Support
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Support
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../file_issue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Issues
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contribute/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#required-materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required Materials
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suggested-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suggested Reading
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+  
+
+
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+
+<!-- Adds file-eye icon to view hookup guide as a single page -->
+
+    <a href="/SparkFun_6DoF_LSM6DSV16X/single_page" title="View Guide as Single-Page" class="md-content__button md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
+        <!-- .icons/fontawesome/solid/scroll.svg -->
+    </a>
+
+
+
+
+                  
+
+  
+    <a href="https://github.com/sparkfun/SparkFun_6DoF_LSM6DSV16X/blob/docs/single_page.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 12h8v2H8v-2m2 8H6V4h7v5h5v3.1l2-2V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4v-2m-2-2h4.1l.9-.9V16H8v2m12.2-5c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="introduction">Introduction</h1>
+<p><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></p>
+<div class="grid.cards.desc">
+<table class="pdf" style="border-style:none;">
+<tbody>
+<tr>
+<td align="center" width="35%">
+<p><a href="https://www.sparkfun.com/products/21325"><img alt="SparkFun 6DoF - LSM6DSV16X (Qwiic)" src="https://cdn.sparkfun.com/assets/parts/2/1/1/1/8/21325_6DOF_3.jpg" width="90%" /></a></p>
+<p>The <a href="https://www.sparkfun.com/products/21325">SparkFun 6DoF - LSM6DSV16X (Qwiic)</a> is a Qwiic enabled board based on the LSM6DSV16X from STMicroelectronics. This little chip is a high-performance, low-power 6-axis IMU, featuring a 3-axis digital accelerometer and a 3-axis digital gyroscope, with a triple core for processing acceleration and angular rate data on three separate channels (user interface, OIS, and EIS) with dedicated configuration, processing, and filtering. </p>
+<p><center>
+<a class="md-button md-button--primary" href="https://www.sparkfun.com/products/21325">Purchase from SparkFun <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M0 24C0 10.7 10.7 0 24 0h45.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5l-51.6-271c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zm128 440a48 48 0 1 1 96 0 48 48 0 1 1-96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20h44v44c0 11 9 20 20 20s20-9 20-20v-44h44c11 0 20-9 20-20s-9-20-20-20h-44V96c0-11-9-20-20-20s-20 9-20 20v44h-44c-11 0-20 9-20 20z"/></svg></span></a>
+</center></p>
+</td>
+<td align="center" width="35%">
+<p><a href="https://www.sparkfun.com/products/21336"><img alt="SparkFun Micro 6DoF - LSM6DSV16X (Qwiic)" src="https://cdn.sparkfun.com/assets/parts/2/1/1/4/4/21336_Micro6DOF_3.jpg" width="90%" /></a></p>
+<p>The <a href="https://www.sparkfun.com/products/21336">SparkFun 6DoF Micro- LSM6DSV16X (Qwiic)</a> is the 1x1's mini-me, containing most of it's elder sibling's functionality in a tiny little package. </p>
+<p><center>
+<a class="md-button md-button--primary" href="https://www.sparkfun.com/products/21336">Purchase from SparkFun <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M0 24C0 10.7 10.7 0 24 0h45.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5l-51.6-271c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zm128 440a48 48 0 1 1 96 0 48 48 0 1 1-96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20h44v44c0 11 9 20 20 20s20-9 20-20v-44h44c11 0 20-9 20-20s-9-20-20-20h-44V96c0-11-9-20-20-20s-20 9-20 20v44h-44c-11 0-20 9-20 20z"/></svg></span></a>
+</center></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="text-align: center;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/iTeRRxXpNMM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+
+<h3 id="required-materials">Required Materials</h3>
+<p>To follow along with this tutorial, you will need the following materials. You may not need everything though depending on what you have. Add it to your cart, read through the guide, and adjust the cart as necessary.</p>
+<section class="cards">
+
+<!--   card 1 -->
+  <article class="card">
+    <div class="card-header">
+        <a href="https://www.sparkfun.com/products/21325"><center><b>SparkFun 6DoF - LSM6DSV16X (Qwiic)</b><br />SEN-21325</center></a>
+    </div>    
+    <div class="card-content">
+        <a href="https://www.sparkfun.com/products/21325">
+            <img alt="SparkFun 6DoF - LSM6DSV16X (Qwiic)" src="https://cdn.sparkfun.com/assets/parts/2/1/1/1/8/21325_6DOF_3.jpg" >
+        </a>
+    <!-- 
+        <div class="card-footer">
+            <button class="button1"><a href="https://www.sparkfun.com/products/21772" style="color: #ffffff">Purchase From SparkFun <i class="fa fa-cart-plus"></i></a></button>
+        </div> -->
+   </div><!-- .card-content -->
+  </article>
+
+<!--   card 2 -->
+  <article class="card">
+    <div class="card-header">
+        <a href="https://www.sparkfun.com/products/21336"><center><b>SparkFun 6DoF Micro- LSM6DSV16X (Qwiic)</b><br /> SEN-21336</center></a>
+    </div>    
+    <div class="card-content">
+        <a href="https://www.sparkfun.com/products/21336">
+            <img alt="SparkFun 6DoF Micro- LSM6DSV16X (Qwiic)" src="https://cdn.sparkfun.com/assets/parts/2/1/1/4/4/21336_Micro6DOF_3.jpg" >
+        </a>
+   </div><!-- .card-content -->
+  </article>
+
+<!--   card 3 -->
+  <article class="card">
+    <div class="card-header">
+        <a href="https://www.sparkfun.com/products/15123"><center><b>SparkFun RedBoard Qwiic</b><br /> DEV-14743</center></a>
+    </div>    
+    <div class="card-content">
+        <a href="https://www.sparkfun.com/products/15123">
+            <img alt="SparkFun RedBoard Qwiic" src="https://cdn.sparkfun.com/assets/parts/1/3/4/9/2/15123-SparkFun_RedBoard_Qwiic-01a.jpg" >
+        </a>
+   </div><!-- .card-content -->
+  </article>
+
+<!--   card 4 -->
+  <article class="card">
+    <div class="card-header">
+        <a href="https://www.sparkfun.com/products/14427"><center><b>Qwiic Cable - 100mm</b><br /> PRT-14427</center></a>
+    </div>    
+    <div class="card-content">
+        <a href="https://www.sparkfun.com/products/14427">
+            <img alt="Qwiic Cable - 100mm" src="https://cdn.sparkfun.com//assets/parts/1/2/4/5/3/14427-Qwiic_Cable_-_100mm-01.jpg" >
+        </a>
+   </div><!-- .card-content -->
+  </article>
+
+<!--   card 5 -->
+  <article class="card">
+    <div class="card-header">
+        <a href="https://www.sparkfun.com/products/14743"><center><b>USB 3.1 Cable A to C - 3 Foot</b><br /> CAB-14743</center></a>
+    </div>    
+    <div class="card-content">
+        <a href="https://www.sparkfun.com/products/14743">
+            <img alt="USB 3.1 Cable A to C - 3 Foot" src="https://cdn.sparkfun.com/assets/parts/1/2/9/7/2/14743-USB_3.1_Cable_A_to_C_-_3_Foot-01.jpg" >
+        </a>
+   </div><!-- .card-content -->
+  </article>
+
+
+
+  </section>
+
+<h3 id="suggested-reading">Suggested Reading</h3>
+<p>If you aren’t familiar with the following concepts, we recommend checking out these tutorials before continuing.</p>
+<section class="cards">
+
+<!--   card 1 -->
+  <article class="card">
+    <picture class="thumbnail">
+         <img class="category__01" src="https://cdn.sparkfun.com/assets/custom_pages/2/7/2/qwiic-logo-registered.jpg" alt="" />
+    </picture>
+    <div class="card-content">
+      <a href="https://www.sparkfun.com/qwiic">Qwiic Connect System</a>
+   </div><!-- .card-content -->
+  </article>
+
+<!--   card 2 -->
+  <article class="card">
+    <picture class="thumbnail">
+         <img class="category__02" src="https://cdn.sparkfun.com/assets/6/7/e/5/a/516c6b6ece395f0f49000000.jpeg" alt="" />
+    </picture>
+    <div class="card-content">
+      <a href="https://learn.sparkfun.com/tutorials/accelerometer-basics">Accelerometer Basics</a>
+   </div><!-- .card-content -->
+  </article>
+
+<!--   card 3 -->
+  <article class="card">
+    <picture class="thumbnail">
+         <img class="category__03" src="https://cdn.sparkfun.com/assets/learn_tutorials/8/2/I2C-Block-Diagram.jpg" alt="" />
+    </picture>
+    <div class="card-content">
+      <a href="https://learn.sparkfun.com/tutorials/i2c">I2C</a>
+   </div><!-- .card-content -->
+  </article>
+</section>
+
+<h1 id="hardware-overview">Hardware Overview</h1>
+<h3 id="accelerometer-lsm6dsv16x">Accelerometer - LSM6DSV16X</h3>
+<p>The LSM6DSV16X Accelerometer from STMicroelectronics has a few different modes: </p>
+<ul>
+<li>Mode 1: Periperhal only mode - I<sup>2</sup>C or SPI</li>
+<li>Mode 2: Sensor hub mode - I<sup>2</sup>C or SPI with controller I2C port</li>
+<li>Mode 3 and 4: AUX SPI mode I<sup>2</sup>C and SPI access multi-read</li>
+</ul>
+<div class="grid.cards.desc">
+<table class="pdf" style="border-style:none;">
+<tbody>
+<tr>
+<td align="center" width="35%">
+<p><a href="../assets/imgs/21325_SparkFun_LSM6DSV16X_IC.jpg"><img alt="SparkFun 6DoF - LSM6DSV16X (Qwiic)" src="../assets/imgs/21325_SparkFun_LSM6DSV16X_IC.jpg" width="90%" /></a></p>
+</td>
+<td align="center" width="35%">
+<p><a href="../assets/imgs/21336_SparkFun_Micro_LSM6DSV16X_IC.jpg"><img alt="SparkFun 6DoF Micro - LSM6DSV16X (Qwiic)" src="../assets/imgs/21336_SparkFun_Micro_LSM6DSV16X_IC.jpg" width="40%" /></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="mode-1">Mode 1</h4>
+<p>This is the default "peripheral only" mode. This mode allows you to use either I<sup>2</sup>C or SPI. By default, I<sup>2</sup>C is enabled with an address of 0x6B. By manipulating the associated jumper, you can change the I<sup>2</sup>C address to 0x6A (cut the power side and close the ground side) or switch to SPI mode (both jumpers open).</p>
+<h4 id="mode-2">Mode 2</h4>
+<p>This mode enables a secondary I<sup>2</sup>C port that the 6DoF controls; up to 4 external sensors can be connected to the I<sup>2</sup>C controller interface of the device. External sensors communicate via the SCX and SDX (PICOX) lines - the SCX and SDX jumpers will need to be opened.</p>
+<h4 id="modes-3-4">Modes 3 &amp; 4</h4>
+<p>In addition to the primary I<sup>2</sup>C peripheral interface or SPI (3- / 4-wire) serial interface, an auxiliary SPI (3- / 4-wire) serial interface is available for external device connections (i.e. camera module). Mode 3 is available for gyroscope only, Mode 4 is available for both gyroscope and accelerometer.</p>
+<p>The analog hub and Qvar functionalities are available in mode 1 with I²C interface only.</p>
+<h3 id="qwiic-connector">Qwiic Connector</h3>
+<p>The Qwiic connector(s) on the SparkFun 6DoF - LSM6DSV16X (Qwiic) and SparkFun 6DoF Micro - LSM6DSV16X (Qwiic) provide power and I<sup>2</sup>C connectivity simultaneously.</p>
+<div class="grid.cards.desc">
+<table class="pdf" style="border-style:none;">
+<tbody>
+<tr>
+<td align="center" width="35%">
+<p><a href="../assets/imgs/21325_SparkFun_LSM6DSV16X_QwiicConnex.jpg"><img alt="SparkFun 6DoF - LSM6DSV16X (Qwiic)" src="../assets/imgs/21325_SparkFun_LSM6DSV16X_QwiicConnex.jpg" width="90%" /></a></p>
+</td>
+<td align="center" width="35%">
+<p><a href="../assets/imgs/21336_SparkFun_Micro_LSM6DSV16X_QwiicConnex.jpg"><img alt="SparkFun 6DoF Micro - LSM6DSV16X (Qwiic)" src="../assets/imgs/21336_SparkFun_Micro_LSM6DSV16X_QwiicConnex.jpg" width="40%" /></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="power">Power</h3>
+<p>Ideally, power to these boards will be provided by the Qwiic cables. However, should you wish to provide power separately, the 1" x 1" board has its pins broken out to PTH and you can wire up power via these. </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><p>Make sure to pay attention to logic levels - supply voltage range should be between 1.71V - 3.6V. </p></p>
+</div>
+<figure>
+<p><a href="../assets/imgs/21325_SparkFun_LSM6DSV16X_PowerPins.jpg" title="Click to enlarge"><img alt="LSM6DSV16X Power Pins" src="../assets/imgs/21325_SparkFun_LSM6DSV16X_PowerPins.jpg" width="400" /></a></p>
+<figcaption>
+<p>LSM6DSV16X Power Pins</p>
+</figcaption>
+</figure>
+<h3 id="gpio">GPIO</h3>
+<p>This is a quick overview of the pin functionality. For more information, refer to the <a href="../assets/BoardFiles/lsm6dsv16x.pdf">datasheet</a>. </p>
+<h4 id="i2c">I<sup>2</sup>C</h4>
+<p>If you do not want to use the Qwiic connectors, I<sup>2</sup>C functionality has been broken out to PTH pins on the 1x1" board. </p>
+<figure>
+<p><a href="../assets/imgs/21325_SparkFun_LSM6DSV16X_I2CPins.jpg" title="Click to enlarge"><img alt="LSM6DSV16X I2C Pins" src="../assets/imgs/21325_SparkFun_LSM6DSV16X_I2CPins.jpg" width="400" /></a></p>
+<figcaption>
+<p>LSM6DSV16X I2C Pins</p>
+</figcaption>
+</figure>
+<h4 id="spi">SPI</h4>
+<p>Primary SPI functionality has been broken out to the highlighted pins below. </p>
+<figure>
+<p><a href="../assets/imgs/21325_SparkFun_LSM6DSV16X_SPIPins.jpg" title="Click to enlarge"><img alt="LSM6DSV16X SPI Pins" src="../assets/imgs/21325_SparkFun_LSM6DSV16X_SPIPins.jpg" width="400" /></a></p>
+<figcaption>
+<p>LSM6DSV16X SPI Pins</p>
+</figcaption>
+</figure>
+<p>Auxiliary SPI is available via AH1, AH2, and OCS. </p>
+<figure>
+<p><a href="../assets/imgs/21325_SparkFun_LSM6DSV16X_AuxSPIPins.jpg" title="Click to enlarge"><img alt="LSM6DSV16X Aux SPI Pins" src="../assets/imgs/21325_SparkFun_LSM6DSV16X_AuxSPIPins.jpg" width="400" /></a></p>
+<figcaption>
+<p>LSM6DSV16X Aux SPI Pins</p>
+</figcaption>
+</figure>
+<h4 id="ah1ah2">AH1/AH2</h4>
+<p>The LSM6DSV16X embeds Qvar functionality, which is an electrostatic sensor able to measure the variation of the quasi-electrostatic potential. The Qvar sensing channel can be used for user interface applications like tap, double tap, triple tap, long press, and L/R – R/L swipe. Functionality is accessed via the AH1 and AH2 pins. For more information, refer to STMicroelectronics' <a href="https://www.st.com/resource/en/application_note/an5755-qvar-sensing-channel--stmicroelectronics.pdf">Qvar Sensing Channel Application Notes</a>. </p>
+<figure>
+<p><a href="../assets/imgs/21325_SparkFun_LSM6DSV16X_QvarPins.jpg" title="Click to enlarge"><img alt="LSM6DSV16X Aux SPI Pins" src="../assets/imgs/21325_SparkFun_LSM6DSV16X_QvarPins.jpg" width="400" /></a></p>
+<figcaption>
+<p>LSM6DSV16X Qvar Pins</p>
+</figcaption>
+</figure>
+<h4 id="interrupt-pins">Interrupt Pins</h4>
+<p>Interrupt functionality is available via the INT pins. There are two interrupts available on the 1x1" board, and 1 interrupt available on the Micro. These pins are configurable to be high or low. </p>
+<div class="grid.cards.desc">
+<table class="pdf" style="border-style:none;">
+<tbody>
+<tr>
+<td align="center" width="35%">
+<p><a href="../assets/imgs/21325_SparkFun_LSM6DSV16X_InterruptPins.jpg"><img alt="LSM6DSV16X Interrupt Pins" src="../assets/imgs/21325_SparkFun_LSM6DSV16X_InterruptPins.jpg" width="90%" /></a></p>
+</td>
+<td align="center" width="35%">
+<p><a href="../assets/imgs/21336_SparkFun_Micro_LSM6DSV16X_InterruptPin.jpg"><img alt="LSM6DSV16X Micro Interrupt Pin" src="../assets/imgs/21336_SparkFun_Micro_LSM6DSV16X_InterruptPin.jpg" width="40%" /></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="jumpers">Jumpers</h3>
+<h4 id="i2c_1">I2C</h4>
+<p>Like our other Qwiic boards, the Qwiic 6DoF - LSM6DSV16X boards come equipped with pull-up resistors on the clock and data pins. If you are daisy-chaining multiple Qwiic devices, you will want to cut this jumper; if multiple sensors are connected to the bus with the pull-up resistors enabled, the parallel equivalent resistance will create too strong of a pull-up for the bus to operate correctly. As a general rule of thumb, disable all but one pair of pull-up resistors if multiple devices are connected to the bus. To disable the pull up resistors, use an X-acto knife to cut the joint between the two jumper pads highlighted below.</p>
+<div class="grid.cards.desc">
+<table class="pdf" style="border-style:none;">
+<tbody>
+<tr>
+<td align="center" width="35%">
+<p><a href="../assets/imgs/21325_SparkFun_LSM6DSV16X_I2CJumper.jpg"><img alt="SparkFun 6DoF - LSM6DSV16X (Qwiic)" src="../assets/imgs/21325_SparkFun_LSM6DSV16X_I2CJumper.jpg" width="90%" /></a></p>
+</td>
+<td align="center" width="35%">
+<p><a href="../assets/imgs/21336_SparkFun_Micro_LSM6DSV16X_I2CJumper.jpg"><img alt="SparkFun 6DoF Micro - LSM6DSV16X (Qwiic)" src="../assets/imgs/21336_SparkFun_Micro_LSM6DSV16X_I2CJumper.jpg" width="40%" /></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="i2c-address">I<sup>2</sup>C Address</h4>
+<p>The SparkFun 6DoF - LSM6DSV16X (Qwiic) boards have a default I<sup>2</sup>C address of 0x6B, but by cutting the address jumper on the back of the board, you can select 0x6A (GND) or SPI (fully open). </p>
+<div class="grid.cards.desc">
+<table class="pdf" style="border-style:none;">
+<tbody>
+<tr>
+<td align="center" width="35%">
+<p><a href="../assets/imgs/21325_SparkFun_LSM6DSV16X_AddressJumper.jpg"><img alt="LSM6DSV16X Address Jumpers" src="../assets/imgs/21325_SparkFun_LSM6DSV16X_AddressJumper.jpg" width="90%" /></a></p>
+</td>
+<td align="center" width="35%">
+<p><a href="../assets/imgs/21336_SparkFun_Micro_LSM6DSV16X_AddressJumper.jpg"><img alt="LSM6DSV16X Micro Address Jumpers" src="../assets/imgs/21336_SparkFun_Micro_LSM6DSV16X_AddressJumper.jpg" width="40%" /></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="sdxscx">SDX/SCX</h4>
+<p>If using either Mode 2 (sensor hub mode) or the analog capabilities of the sensor, cut both of these traces. </p>
+<figure>
+<p><a href="../assets/imgs/21325_SparkFun_LSM6DSV16X_SCXSDXJumpers.jpg" title="Click to enlarge"><img alt="LSM6DSV16X SCX/SDX Jumpers" src="../assets/imgs/21325_SparkFun_LSM6DSV16X_SCXSDXJumpers.jpg" width="400" /></a></p>
+<figcaption>
+<p>LSM6DSV16X SCX/SDX Jumpers</p>
+</figcaption>
+</figure>
+<h4 id="pad-jumpers">Pad Jumpers</h4>
+<p>When using the Analog In (QVar) functionality, you can select whether P1 is tied to GND or 3v3 using the PAD1 jumper. Similarly, you can select whether P2 is tied to GND or 3v3 using the PAD2 jumper. Refer to either the <a href="https://www.st.com/en/mems-and-sensors/lsm6dsv16x.html#documentation">application notes</a> for more information. </p>
+<figure>
+<p><a href="../assets/imgs/21325_SparkFun_LSM6DSV16X_PadJumpers.jpg" title="Click to enlarge"><img alt="LSM6DSV16X Pad Jumpers" src="../assets/imgs/21325_SparkFun_LSM6DSV16X_PadJumpers.jpg" width="400" /></a></p>
+<figcaption>
+<p>LSM6DSV16X Pad Jumpers</p>
+</figcaption>
+</figure>
+<h4 id="led">LED</h4>
+<p>Let there be light! Or not. An LED on the front of each board indicates power is being provided to the board. If you don't like LEDs or you are concerned about current draw, cut the jumper highlighted below. </p>
+<div class="grid.cards.desc">
+<table class="pdf" style="border-style:none;">
+<tbody>
+<tr>
+<td align="center" width="35%">
+<p><a href="../assets/imgs/21325_SparkFun_LSM6DSV16X_LEDJumper.jpg"><img alt="SparkFun 6DoF - LSM6DSV16X (Qwiic)" src="../assets/imgs/21325_SparkFun_LSM6DSV16X_LEDJumper.jpg" width="90%" /></a></p>
+</td>
+<td align="center" width="35%">
+<p><a href="../assets/imgs/21336_SparkFun_Micro_LSM6DSV16X_LEDJumper.jpg"><img alt="SparkFun 6DoF Micro - LSM6DSV16X (Qwiic)" src="../assets/imgs/21336_SparkFun_Micro_LSM6DSV16X_LEDJumper.jpg" width="40%" /></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="board-outline">Board Outline</h3>
+<p>The SparkFun 6DoF - LSM6DSV16X (Qwiic) follows the standard 1" x 1" convention of most of our Qwiic breakout boards. </p>
+<figure>
+<p><a href="../assets/BoardFiles/SparkFun_6DoF_LSM6DSV16X-BoardOutline.png" title="Click to enlarge"><img alt="SparkFun 6DoF - LSM6DSV16X (Qwiic) Board Outline" src="../assets/BoardFiles/SparkFun_6DoF_LSM6DSV16X-BoardOutline.png" width="90%" /></a></p>
+<figcaption>
+<p>SparkFun 6DoF - LSM6DSV16X (Qwiic)</p>
+</figcaption>
+</figure>
+<p>The SparkFun 6DoF Micro - LSM6DSV16X (Qwiic) measures 0.3" x 0.75". </p>
+<figure>
+<p><a href="../assets/BoardFiles/SparkFun_Micro_6DoF_LSM6DSV16X-BoardOutline.png" title="Click to enlarge"><img alt="SparkFun 6DoF - LSM6DSV16X (Qwiic) Board Outline" src="../assets/BoardFiles/SparkFun_Micro_6DoF_LSM6DSV16X-BoardOutline.png" width="90%" /></a></p>
+<figcaption>
+<p>SparkFun 6DoF Micro - LSM6DSV16X (Qwiic)</p>
+</figcaption>
+</figure>
+<h1 id="hardware-assembly">Hardware Assembly</h1>
+<p>The delightful thing about our Qwiic boards is that they are quite literally plug and play. </p>
+<figure>
+<p><a href="../assets/imgs/21325_6DOF_5.jpg" title="Click to enlarge"><img alt="SparkFun 6DoF - LSM6DSV16X (Qwiic) Plugged into the RedBoard Qwiic" src="../assets/imgs/21325_6DOF_5.jpg" width="400" /></a></p>
+<figcaption>
+<p>SparkFun 6DoF - LSM6DSV16X (Qwiic) Plugged into the RedBoard Qwiic</p>
+</figcaption>
+</figure>
+<figure>
+<p><a href="../assets/imgs/21336_Micro6DOF_5.jpg" title="Click to enlarge"><img alt="SparkFun 6DoF Micro - LSM6DSV16X (Qwiic)  Plugged into the RedBoard Qwiic" src="../assets/imgs/21336_Micro6DOF_5.jpg" width="400" /></a></p>
+<figcaption>
+<p>SparkFun 6DoF Micro - LSM6DSV16X (Qwiic)  Plugged into the RedBoard Qwiic</p>
+</figcaption>
+</figure>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>If you are using the SparkFun RedBoard Qwiic, make sure that you have your I/O jumper set correctly. You'll find the 3V3 vs 5V jumper on the front of the RedBoard Qwiic. You'll need to cut the connective trace to 5V and solder the center jumper pad to the 3V3 pad in order for the examples to work. More information can be found in the <a href="https://learn.sparkfun.com/tutorials/redboard-qwiic-hookup-guide/all#hardware-overview">RedBoard Qwiic Hookup Guide</a>. </p>
+<p><figure markdown>
+<a href="../assets/imgs/Qwiic_Redboard_-_IO_Jumper.jfif" title="Click to enlarge"><img alt="3V3/5V Jumper on the RedBoard" src="../assets/imgs/Qwiic_Redboard_-_IO_Jumper.jfif" width="90%" /></a>
+<figcaption markdown>3V3/5V Jumper on the RedBoard</figcaption>
+</figure></p>
+</div>
+<h1 id="software-setup-and-programming">Software Setup and Programming</h1>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>If this is your first time using Arduino, please review our tutorial on <a href="https://learn.sparkfun.com/tutorials/installing-arduino-ide">installing the Arduino IDE</a>. If you have not previously installed an Arduino library, please check out our <a href="https://learn.sparkfun.com/tutorials/installing-an-arduino-library">installation guide</a>.</p>
+</div>
+<p>SparkFun has written a library to work with the SparkFun LSM6DSV16X Boards. You can obtain this library through the Arduino Library Manager by searching for "LSM6DSV16X" and installing the latest version. If you prefer downloading libraries manually, you can grab them from the GitHub Repository.</p>
+<p><center>
+    <a class="md-button md-button--primary" href="https://github.com/sparkfun/SparkFun_LSM6DSV16X_Arduino_Library/archive/refs/heads/main.zip">SparkFun LSM6DSV16X Arduino Library GitHub</a>
+</center></p>
+<h1 id="arduino-examples">Arduino Examples</h1>
+<h3 id="example-1-basic-readings">Example 1: Basic Readings</h3>
+<p>This first example just does some basic measurements. To find Example 1, go to <strong>File</strong> &gt; <strong>Examples</strong> &gt; <strong>SparkFun 6DoF LSM6DSV16X</strong> &gt; <strong>example1_basic</strong>:</p>
+<figure>
+<p><a href="../assets/imgs/Example1_Menu.jpg" title="Click to enlarge"><img alt="LSM6DSV16X Arduino Example 1" src="../assets/imgs/Example1_Menu.jpg" width="90%" /></a></p>
+<figcaption>
+<p>Finding Example 1</p>
+</figcaption>
+</figure>
+<p>Alternatively, you can expand the link below and copy and paste the code into a shiny new Arduino sketch: </p>
+<details>
+<summary>Example 1 Arduino Code</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>/*
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  example1-basic
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  This example shows the basic settings and functions for retrieving accelerometer
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    and gyroscopic data.
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  Written by Elias Santistevan @ SparkFun Electronics, May, 2022
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    Products:
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    SparkFun 6DoF LSM6DSV16X (Qwiic):
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        https://www.sparkfun.com/products/21325
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    SparkFun Micro 6DoF LSM6DSV16X (Qwiic):
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>        https://www.sparkfun.com/products/21336
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>  Repository:
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>        https://github.com/sparkfun/SparkFun_LSM6DSV16X_Arduino_Library
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>  SparkFun code, firmware, and software is released under the MIT
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    License (http://opensource.org/licenses/MIT).
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>*/
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>#include &quot;SparkFun_LSM6DSV16X.h&quot;
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>#include &lt;Wire.h&gt;
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>SparkFun_LSM6DSV16X myLSM;
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>// Structs for X,Y,Z data
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>sfe_lsm_data_t accelData;
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>sfe_lsm_data_t gyroData;
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>void setup()
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>{
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>    Wire.begin();
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>    Serial.begin(115200);
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>    while (!Serial)
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>    {
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>    }
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>    Serial.println(&quot;LSM6DSV16X Example 1 - Basic Readings I2C&quot;);
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>
+<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>    if (!myLSM.begin())
+<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>    {
+<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>        Serial.println(&quot;Did not begin, check your wiring and/or I2C address!&quot;);
+<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>        while (1)
+<a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>            ;
+<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>    }
+<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>
+<a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>    // Reset the device to default settings. This if helpful is you&#39;re doing multiple
+<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>    // uploads testing different settings.
+<a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>    myLSM.deviceReset();
+<a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>
+<a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>    // Wait for it to finish reseting
+<a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>    while (!myLSM.getDeviceReset())
+<a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>    {
+<a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>        delay(1);
+<a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a>    }
+<a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a>
+<a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a>    Serial.println(&quot;Board has been Reset.&quot;);
+<a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a>    Serial.println(&quot;Applying settings.&quot;);
+<a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a>
+<a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a>    // Accelerometer and Gyroscope registers will not be updated
+<a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a>    // until read.
+<a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a>    myLSM.enableBlockDataUpdate();
+<a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a>
+<a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a>    // Set the output data rate and precision of the accelerometer
+<a id="__codelineno-0-70" name="__codelineno-0-70" href="#__codelineno-0-70"></a>    myLSM.setAccelDataRate(LSM6DSV16X_ODR_AT_7Hz5);
+<a id="__codelineno-0-71" name="__codelineno-0-71" href="#__codelineno-0-71"></a>    myLSM.setAccelFullScale(LSM6DSV16X_16g);
+<a id="__codelineno-0-72" name="__codelineno-0-72" href="#__codelineno-0-72"></a>
+<a id="__codelineno-0-73" name="__codelineno-0-73" href="#__codelineno-0-73"></a>    // Set the output data rate and precision of the gyroscope
+<a id="__codelineno-0-74" name="__codelineno-0-74" href="#__codelineno-0-74"></a>    myLSM.setGyroDataRate(LSM6DSV16X_ODR_AT_15Hz);
+<a id="__codelineno-0-75" name="__codelineno-0-75" href="#__codelineno-0-75"></a>    myLSM.setGyroFullScale(LSM6DSV16X_2000dps);
+<a id="__codelineno-0-76" name="__codelineno-0-76" href="#__codelineno-0-76"></a>
+<a id="__codelineno-0-77" name="__codelineno-0-77" href="#__codelineno-0-77"></a>    // Enable filter settling.
+<a id="__codelineno-0-78" name="__codelineno-0-78" href="#__codelineno-0-78"></a>    myLSM.enableFilterSettling();
+<a id="__codelineno-0-79" name="__codelineno-0-79" href="#__codelineno-0-79"></a>
+<a id="__codelineno-0-80" name="__codelineno-0-80" href="#__codelineno-0-80"></a>    // Turn on the accelerometer&#39;s filter and apply settings.
+<a id="__codelineno-0-81" name="__codelineno-0-81" href="#__codelineno-0-81"></a>    myLSM.enableAccelLP2Filter();
+<a id="__codelineno-0-82" name="__codelineno-0-82" href="#__codelineno-0-82"></a>    myLSM.setAccelLP2Bandwidth(LSM6DSV16X_XL_STRONG);
+<a id="__codelineno-0-83" name="__codelineno-0-83" href="#__codelineno-0-83"></a>
+<a id="__codelineno-0-84" name="__codelineno-0-84" href="#__codelineno-0-84"></a>    // Turn on the gyroscope&#39;s filter and apply settings.
+<a id="__codelineno-0-85" name="__codelineno-0-85" href="#__codelineno-0-85"></a>    myLSM.enableGyroLP1Filter();
+<a id="__codelineno-0-86" name="__codelineno-0-86" href="#__codelineno-0-86"></a>    myLSM.setGyroLP1Bandwidth(LSM6DSV16X_GY_ULTRA_LIGHT);
+<a id="__codelineno-0-87" name="__codelineno-0-87" href="#__codelineno-0-87"></a>
+<a id="__codelineno-0-88" name="__codelineno-0-88" href="#__codelineno-0-88"></a>    Serial.println(&quot;Ready.&quot;);
+<a id="__codelineno-0-89" name="__codelineno-0-89" href="#__codelineno-0-89"></a>}
+<a id="__codelineno-0-90" name="__codelineno-0-90" href="#__codelineno-0-90"></a>
+<a id="__codelineno-0-91" name="__codelineno-0-91" href="#__codelineno-0-91"></a>void loop()
+<a id="__codelineno-0-92" name="__codelineno-0-92" href="#__codelineno-0-92"></a>{
+<a id="__codelineno-0-93" name="__codelineno-0-93" href="#__codelineno-0-93"></a>
+<a id="__codelineno-0-94" name="__codelineno-0-94" href="#__codelineno-0-94"></a>    // Check if both gyroscope and accelerometer data is available.
+<a id="__codelineno-0-95" name="__codelineno-0-95" href="#__codelineno-0-95"></a>    if (myLSM.checkStatus())
+<a id="__codelineno-0-96" name="__codelineno-0-96" href="#__codelineno-0-96"></a>    {
+<a id="__codelineno-0-97" name="__codelineno-0-97" href="#__codelineno-0-97"></a>        myLSM.getAccel(&amp;accelData);
+<a id="__codelineno-0-98" name="__codelineno-0-98" href="#__codelineno-0-98"></a>        myLSM.getGyro(&amp;gyroData);
+<a id="__codelineno-0-99" name="__codelineno-0-99" href="#__codelineno-0-99"></a>        Serial.print(&quot;Accelerometer: &quot;);
+<a id="__codelineno-0-100" name="__codelineno-0-100" href="#__codelineno-0-100"></a>        Serial.print(&quot;X: &quot;);
+<a id="__codelineno-0-101" name="__codelineno-0-101" href="#__codelineno-0-101"></a>        Serial.print(accelData.xData);
+<a id="__codelineno-0-102" name="__codelineno-0-102" href="#__codelineno-0-102"></a>        Serial.print(&quot; &quot;);
+<a id="__codelineno-0-103" name="__codelineno-0-103" href="#__codelineno-0-103"></a>        Serial.print(&quot;Y: &quot;);
+<a id="__codelineno-0-104" name="__codelineno-0-104" href="#__codelineno-0-104"></a>        Serial.print(accelData.yData);
+<a id="__codelineno-0-105" name="__codelineno-0-105" href="#__codelineno-0-105"></a>        Serial.print(&quot; &quot;);
+<a id="__codelineno-0-106" name="__codelineno-0-106" href="#__codelineno-0-106"></a>        Serial.print(&quot;Z: &quot;);
+<a id="__codelineno-0-107" name="__codelineno-0-107" href="#__codelineno-0-107"></a>        Serial.print(accelData.zData);
+<a id="__codelineno-0-108" name="__codelineno-0-108" href="#__codelineno-0-108"></a>        Serial.println(&quot; &quot;);
+<a id="__codelineno-0-109" name="__codelineno-0-109" href="#__codelineno-0-109"></a>        Serial.print(&quot;Gyroscope: &quot;);
+<a id="__codelineno-0-110" name="__codelineno-0-110" href="#__codelineno-0-110"></a>        Serial.print(&quot;X: &quot;);
+<a id="__codelineno-0-111" name="__codelineno-0-111" href="#__codelineno-0-111"></a>        Serial.print(gyroData.xData);
+<a id="__codelineno-0-112" name="__codelineno-0-112" href="#__codelineno-0-112"></a>        Serial.print(&quot; &quot;);
+<a id="__codelineno-0-113" name="__codelineno-0-113" href="#__codelineno-0-113"></a>        Serial.print(&quot;Y: &quot;);
+<a id="__codelineno-0-114" name="__codelineno-0-114" href="#__codelineno-0-114"></a>        Serial.print(gyroData.yData);
+<a id="__codelineno-0-115" name="__codelineno-0-115" href="#__codelineno-0-115"></a>        Serial.print(&quot; &quot;);
+<a id="__codelineno-0-116" name="__codelineno-0-116" href="#__codelineno-0-116"></a>        Serial.print(&quot;Z: &quot;);
+<a id="__codelineno-0-117" name="__codelineno-0-117" href="#__codelineno-0-117"></a>        Serial.print(gyroData.zData);
+<a id="__codelineno-0-118" name="__codelineno-0-118" href="#__codelineno-0-118"></a>        Serial.println(&quot; &quot;);
+<a id="__codelineno-0-119" name="__codelineno-0-119" href="#__codelineno-0-119"></a>    }
+<a id="__codelineno-0-120" name="__codelineno-0-120" href="#__codelineno-0-120"></a>
+<a id="__codelineno-0-121" name="__codelineno-0-121" href="#__codelineno-0-121"></a>    delay(100);
+<a id="__codelineno-0-122" name="__codelineno-0-122" href="#__codelineno-0-122"></a>}
+</code></pre></div>
+</details>
+<p>Make sure you've selected the correct board and port in the Tools menu and then hit the upload button. Once the code has finished uploading, go ahead and open a <a href="https://learn.sparkfun.com/tutorials/terminal-basics">Serial Monitor</a>. You should see something similar to the following. Note the obvious changes where the sensor was turned upright. </p>
+<figure>
+<p><a href="../assets/imgs/Example1_Output.jpg" title="Click to enlarge"><img alt="LSM6DSV16X Arduino Example 1 Output" src="../assets/imgs/Example1_Output.jpg" width="90%" /></a></p>
+<figcaption>
+<p>Example 1 Output</p>
+</figcaption>
+</figure>
+<h3 id="example-2-interrupt">Example 2: Interrupt</h3>
+<p>This example shows the basic settings and functions for retrieving accelerometer data. In addition we're setting the data ready signal to interrupt pin one in an active high configuration and show additional ways in which the interrupts can be configured. To find Example 2, go to <strong>File</strong> &gt; <strong>Examples</strong> &gt; <strong>SparkFun 6DoF LSM6DSV16X</strong> &gt; <strong>example2_interrupt</strong>. </p>
+<figure>
+<p><a href="../assets/imgs/Example2_Menu.jpg" title="Click to enlarge"><img alt="LSM6DSV16X Arduino Example 2" src="../assets/imgs/Example2_Menu.jpg" width="90%" /></a></p>
+<figcaption>
+<p>Finding Example 2</p>
+</figcaption>
+</figure>
+<p>Alternatively, you can expand the link below and copy and paste the code into a shiny new Arduino sketch: </p>
+<details>
+<summary>Example 2 Arduino Code</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>/*
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  example2-interrupt
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  This example shows the basic settings and functions for retrieving accelerometer
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    data. In addition we&#39;re setting the data ready signal to interrupt pin one in an
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    active high configuration and show additional ways in which the interrupts
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    can be configured.
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>  Written by Elias Santistevan @ SparkFun Electronics, May 2022
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    Products:
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    SparkFun 6DoF LSM6DSV16X (Qwiic):
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>        https://www.sparkfun.com/products/21325
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    SparkFun Micro 6DoF LSM6DSV16X (Qwiic):
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>        https://www.sparkfun.com/products/21336
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>  Repository:
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>        https://github.com/sparkfun/SparkFun_LSM6DSV16X_Arduino_Library
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>  SparkFun code, firmware, and software is released under the MIT
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>    License (http://opensource.org/licenses/MIT).
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>*/
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>#include &quot;SparkFun_LSM6DSV16X.h&quot;
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>#include &lt;Wire.h&gt;
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>// Structs for X,Y,Z data
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>SparkFun_LSM6DSV16X myLSM;
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>// Structs for X,Y,Z data
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>sfe_lsm_data_t accelData;
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>
+<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>// Interrupt pin
+<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>byte interrupt_pin = 10;
+<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>
+<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>void setup()
+<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>{
+<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>
+<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>    // Set the interrupt to INPUT
+<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>    pinMode(interrupt_pin, INPUT);
+<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>
+<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>    Serial.begin(115200);
+<a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a>    while (!Serial)
+<a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a>    {
+<a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a>    }
+<a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a>
+<a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a>    Serial.println(&quot;LSM6DSV16X Example 2 - Interrupts&quot;);
+<a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a>
+<a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a>    Wire.begin();
+<a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a>
+<a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a>    if (!myLSM.begin())
+<a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a>    {
+<a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a>        Serial.println(&quot;Did not begin, check your wiring and/or I2C address!&quot;);
+<a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a>        while (1)
+<a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a>            ;
+<a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a>    }
+<a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a>
+<a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a>    // Reset the device to default settings. This is helpful if you&#39;re doing multiple
+<a id="__codelineno-1-61" name="__codelineno-1-61" href="#__codelineno-1-61"></a>    // uploads testing different settings.
+<a id="__codelineno-1-62" name="__codelineno-1-62" href="#__codelineno-1-62"></a>    myLSM.deviceReset();
+<a id="__codelineno-1-63" name="__codelineno-1-63" href="#__codelineno-1-63"></a>
+<a id="__codelineno-1-64" name="__codelineno-1-64" href="#__codelineno-1-64"></a>    // Wait for it to finish reseting
+<a id="__codelineno-1-65" name="__codelineno-1-65" href="#__codelineno-1-65"></a>    while (!myLSM.getDeviceReset())
+<a id="__codelineno-1-66" name="__codelineno-1-66" href="#__codelineno-1-66"></a>    {
+<a id="__codelineno-1-67" name="__codelineno-1-67" href="#__codelineno-1-67"></a>        delay(1);
+<a id="__codelineno-1-68" name="__codelineno-1-68" href="#__codelineno-1-68"></a>    }
+<a id="__codelineno-1-69" name="__codelineno-1-69" href="#__codelineno-1-69"></a>
+<a id="__codelineno-1-70" name="__codelineno-1-70" href="#__codelineno-1-70"></a>    Serial.println(&quot;Board has been Reset.&quot;);
+<a id="__codelineno-1-71" name="__codelineno-1-71" href="#__codelineno-1-71"></a>    Serial.println(&quot;Applying settings.&quot;);
+<a id="__codelineno-1-72" name="__codelineno-1-72" href="#__codelineno-1-72"></a>
+<a id="__codelineno-1-73" name="__codelineno-1-73" href="#__codelineno-1-73"></a>    // Accelerometer and Gyroscope registers will not be updated
+<a id="__codelineno-1-74" name="__codelineno-1-74" href="#__codelineno-1-74"></a>    // until read.
+<a id="__codelineno-1-75" name="__codelineno-1-75" href="#__codelineno-1-75"></a>    myLSM.enableBlockDataUpdate();
+<a id="__codelineno-1-76" name="__codelineno-1-76" href="#__codelineno-1-76"></a>
+<a id="__codelineno-1-77" name="__codelineno-1-77" href="#__codelineno-1-77"></a>    // Set the output data rate and precision of the accelerometer
+<a id="__codelineno-1-78" name="__codelineno-1-78" href="#__codelineno-1-78"></a>    myLSM.setAccelDataRate(LSM6DSV16X_ODR_AT_7Hz5);
+<a id="__codelineno-1-79" name="__codelineno-1-79" href="#__codelineno-1-79"></a>    myLSM.setAccelFullScale(LSM6DSV16X_16g);
+<a id="__codelineno-1-80" name="__codelineno-1-80" href="#__codelineno-1-80"></a>
+<a id="__codelineno-1-81" name="__codelineno-1-81" href="#__codelineno-1-81"></a>    // Turn on the accelerometer&#39;s filter and apply settings.
+<a id="__codelineno-1-82" name="__codelineno-1-82" href="#__codelineno-1-82"></a>    myLSM.enableAccelLP2Filter();
+<a id="__codelineno-1-83" name="__codelineno-1-83" href="#__codelineno-1-83"></a>    myLSM.setAccelLP2Bandwidth(LSM6DSV16X_XL_STRONG);
+<a id="__codelineno-1-84" name="__codelineno-1-84" href="#__codelineno-1-84"></a>
+<a id="__codelineno-1-85" name="__codelineno-1-85" href="#__codelineno-1-85"></a>    // Set the accelerometer&#39;s status i.e. the data ready to interrupt one.
+<a id="__codelineno-1-86" name="__codelineno-1-86" href="#__codelineno-1-86"></a>    // Commented out just below is the function to send the data ready
+<a id="__codelineno-1-87" name="__codelineno-1-87" href="#__codelineno-1-87"></a>    // to interrupt two.
+<a id="__codelineno-1-88" name="__codelineno-1-88" href="#__codelineno-1-88"></a>
+<a id="__codelineno-1-89" name="__codelineno-1-89" href="#__codelineno-1-89"></a>    myLSM.setIntAccelDataReady(LSM_PIN_ONE);
+<a id="__codelineno-1-90" name="__codelineno-1-90" href="#__codelineno-1-90"></a>    // myLSM.setIntAccelDataReady(LSM_PIN_TWO);
+<a id="__codelineno-1-91" name="__codelineno-1-91" href="#__codelineno-1-91"></a>
+<a id="__codelineno-1-92" name="__codelineno-1-92" href="#__codelineno-1-92"></a>    // We can just as easily set the gyroscope&#39;s data read signal to either interrupt
+<a id="__codelineno-1-93" name="__codelineno-1-93" href="#__codelineno-1-93"></a>
+<a id="__codelineno-1-94" name="__codelineno-1-94" href="#__codelineno-1-94"></a>    // myLSM.setIntGyroDataReady(LSM_PIN_ONE);
+<a id="__codelineno-1-95" name="__codelineno-1-95" href="#__codelineno-1-95"></a>    // myLSM.setIntGyroDataReady(LSM_PIN_TWO);
+<a id="__codelineno-1-96" name="__codelineno-1-96" href="#__codelineno-1-96"></a>
+<a id="__codelineno-1-97" name="__codelineno-1-97" href="#__codelineno-1-97"></a>    // Uncommenting the function call below will change interrupt TWO
+<a id="__codelineno-1-98" name="__codelineno-1-98" href="#__codelineno-1-98"></a>    // active LOW instead of HIGH.
+<a id="__codelineno-1-99" name="__codelineno-1-99" href="#__codelineno-1-99"></a>
+<a id="__codelineno-1-100" name="__codelineno-1-100" href="#__codelineno-1-100"></a>    // myLSM.setInt2DENActiveLow();
+<a id="__codelineno-1-101" name="__codelineno-1-101" href="#__codelineno-1-101"></a>
+<a id="__codelineno-1-102" name="__codelineno-1-102" href="#__codelineno-1-102"></a>    // This function call will modify which &quot;events&quot; trigger an interrupt. No
+<a id="__codelineno-1-103" name="__codelineno-1-103" href="#__codelineno-1-103"></a>    // argument has been given, please refer to the datasheet for more
+<a id="__codelineno-1-104" name="__codelineno-1-104" href="#__codelineno-1-104"></a>    // information.
+<a id="__codelineno-1-105" name="__codelineno-1-105" href="#__codelineno-1-105"></a>
+<a id="__codelineno-1-106" name="__codelineno-1-106" href="#__codelineno-1-106"></a>    // Possible values for routing your interrupt include:
+<a id="__codelineno-1-107" name="__codelineno-1-107" href="#__codelineno-1-107"></a>    // lsm6dsv16x_pin_int_route_t routeInt;
+<a id="__codelineno-1-108" name="__codelineno-1-108" href="#__codelineno-1-108"></a>    // routeInt.drdy_xl = 1;
+<a id="__codelineno-1-109" name="__codelineno-1-109" href="#__codelineno-1-109"></a>    // routeInt.drdy_g = 1;
+<a id="__codelineno-1-110" name="__codelineno-1-110" href="#__codelineno-1-110"></a>    // routeInt.drdy_g = 1;
+<a id="__codelineno-1-111" name="__codelineno-1-111" href="#__codelineno-1-111"></a>    // routeInt.single_tap = 1;
+<a id="__codelineno-1-112" name="__codelineno-1-112" href="#__codelineno-1-112"></a>    // routeInt.double_tap = 1;
+<a id="__codelineno-1-113" name="__codelineno-1-113" href="#__codelineno-1-113"></a>    // myLSM.setIntRoute(routeInt, LSM_PIN_ONE);
+<a id="__codelineno-1-114" name="__codelineno-1-114" href="#__codelineno-1-114"></a>
+<a id="__codelineno-1-115" name="__codelineno-1-115" href="#__codelineno-1-115"></a>    // This function changes the latching behaviour of the interrupts to pulsed.
+<a id="__codelineno-1-116" name="__codelineno-1-116" href="#__codelineno-1-116"></a>    // lsm6dsv16x_data_ready_mode_t mode = LSM6DSV16X_DRDY_PULSED;
+<a id="__codelineno-1-117" name="__codelineno-1-117" href="#__codelineno-1-117"></a>    // myLSM.setDataReadyMode();
+<a id="__codelineno-1-118" name="__codelineno-1-118" href="#__codelineno-1-118"></a>
+<a id="__codelineno-1-119" name="__codelineno-1-119" href="#__codelineno-1-119"></a>    Serial.println(&quot;Ready.&quot;);
+<a id="__codelineno-1-120" name="__codelineno-1-120" href="#__codelineno-1-120"></a>}
+<a id="__codelineno-1-121" name="__codelineno-1-121" href="#__codelineno-1-121"></a>
+<a id="__codelineno-1-122" name="__codelineno-1-122" href="#__codelineno-1-122"></a>void loop()
+<a id="__codelineno-1-123" name="__codelineno-1-123" href="#__codelineno-1-123"></a>{
+<a id="__codelineno-1-124" name="__codelineno-1-124" href="#__codelineno-1-124"></a>
+<a id="__codelineno-1-125" name="__codelineno-1-125" href="#__codelineno-1-125"></a>    if (digitalRead(interrupt_pin) == HIGH)
+<a id="__codelineno-1-126" name="__codelineno-1-126" href="#__codelineno-1-126"></a>    {
+<a id="__codelineno-1-127" name="__codelineno-1-127" href="#__codelineno-1-127"></a>        myLSM.getAccel(&amp;accelData);
+<a id="__codelineno-1-128" name="__codelineno-1-128" href="#__codelineno-1-128"></a>        Serial.print(&quot;Accelerometer: &quot;);
+<a id="__codelineno-1-129" name="__codelineno-1-129" href="#__codelineno-1-129"></a>        Serial.print(&quot;X: &quot;);
+<a id="__codelineno-1-130" name="__codelineno-1-130" href="#__codelineno-1-130"></a>        Serial.print(accelData.xData);
+<a id="__codelineno-1-131" name="__codelineno-1-131" href="#__codelineno-1-131"></a>        Serial.print(&quot; &quot;);
+<a id="__codelineno-1-132" name="__codelineno-1-132" href="#__codelineno-1-132"></a>        Serial.print(&quot;Y: &quot;);
+<a id="__codelineno-1-133" name="__codelineno-1-133" href="#__codelineno-1-133"></a>        Serial.print(accelData.yData);
+<a id="__codelineno-1-134" name="__codelineno-1-134" href="#__codelineno-1-134"></a>        Serial.print(&quot; &quot;);
+<a id="__codelineno-1-135" name="__codelineno-1-135" href="#__codelineno-1-135"></a>        Serial.print(&quot;Z: &quot;);
+<a id="__codelineno-1-136" name="__codelineno-1-136" href="#__codelineno-1-136"></a>        Serial.print(accelData.zData);
+<a id="__codelineno-1-137" name="__codelineno-1-137" href="#__codelineno-1-137"></a>        Serial.println(&quot; &quot;);
+<a id="__codelineno-1-138" name="__codelineno-1-138" href="#__codelineno-1-138"></a>    }
+<a id="__codelineno-1-139" name="__codelineno-1-139" href="#__codelineno-1-139"></a>
+<a id="__codelineno-1-140" name="__codelineno-1-140" href="#__codelineno-1-140"></a>    delay(100);
+<a id="__codelineno-1-141" name="__codelineno-1-141" href="#__codelineno-1-141"></a>}
+</code></pre></div>
+</details>
+<p>Your setup should resemble something like this: </p>
+<figure>
+<p><a href="../assets/imgs/Example2_Wiring.jpg" title="Click to enlarge"><img alt="LSM6DSV16X Arduino Example 2" src="../assets/imgs/Example2_Wiring.jpg" width="90%" /></a></p>
+<figcaption>
+<p>Example 2</p>
+</figcaption>
+</figure>
+<p>Make sure your code matches the pin you've selected as the interrupt pin. Here Pin 2 is wired as the interrupt pin on the RedBoard, so the code was modified to reflect that. Again, make sure you've selected the correct board and port in the Tools menu and then hit the upload button. Once the code has finished uploading, go ahead and open a <a href="https://learn.sparkfun.com/tutorials/terminal-basics">Serial Monitor</a>. You should see something similar to the following.</p>
+<figure>
+<p><a href="../assets/imgs/Example2_Output.jpg" title="Click to enlarge"><img alt="LSM6DSV16X Arduino Example 2 Output" src="../assets/imgs/Example2_Output.jpg" width="90%" /></a></p>
+<figcaption>
+<p>Example 2 Output</p>
+</figcaption>
+</figure>
+<h3 id="example-3-spi">Example 3: SPI</h3>
+<p>This example shows the basic settings and functions for retrieving accelerometer and gyroscopic data but using the SPI interface. Everything other than that is identical to the "basic" example. To find Example 3, go to <strong>File</strong> &gt; <strong>Examples</strong> &gt; <strong>SparkFun 6DoF LSM6DSV16X</strong> &gt; <strong>example3_spi</strong>:</p>
+<figure>
+<p><a href="../assets/imgs/Example3_Menu.jpg" title="Click to enlarge"><img alt="LSM6DSV16X Arduino Example 3" src="../assets/imgs/Example3_Menu.jpg" width="90%" /></a></p>
+<figcaption>
+<p>Finding Example 3</p>
+</figcaption>
+</figure>
+<p>Alternatively, you can expand the link below and copy and paste the code into a shiny new Arduino sketch: </p>
+<details>
+<summary>Example 3 Arduino Code</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>/*
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  example3-spi
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  This example shows the basic settings and functions for retrieving accelerometer
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    and gyroscopic data but using the SPI interface. Everything other than that is
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    identical to the &quot;basic&quot; example.
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>  Written by Elias Santistevan @ SparkFun Electronics, May 2022
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    Products:
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    SparkFun 6DoF LSM6DSV16X (Qwiic):
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>        https://www.sparkfun.com/products/21325
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>    SparkFun Micro 6DoF LSM6DSV16X (Qwiic):
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>        https://www.sparkfun.com/products/21336
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>  Repository:
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>        https://github.com/sparkfun/SparkFun_LSM6DSV16X_Arduino_Library
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>  SparkFun code, firmware, and software is released under the MIT
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>    License (http://opensource.org/licenses/MIT).
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>*/
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>#include &quot;SparkFun_LSM6DSV16X.h&quot;
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>#include &lt;SPI.h&gt;
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>// SPI instance class call
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>SparkFun_LSM6DSV16X_SPI myLSM;
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>// Structs for X,Y,Z data
+<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>sfe_lsm_data_t accelData;
+<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>sfe_lsm_data_t gyroData;
+<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>
+<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>// Set your chip select pin according to your setup.
+<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>int chipSelect = 10;
+<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>
+<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>void setup()
+<a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>{
+<a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a>
+<a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a>    SPI.begin();
+<a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a>
+<a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a>    Serial.begin(115200);
+<a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a>    while (!Serial)
+<a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a>    {
+<a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a>    }
+<a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a>
+<a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a>    Serial.println(&quot;LSM6DSV16X Example 3 - Basic Readings SPI&quot;);
+<a id="__codelineno-2-49" name="__codelineno-2-49" href="#__codelineno-2-49"></a>
+<a id="__codelineno-2-50" name="__codelineno-2-50" href="#__codelineno-2-50"></a>    pinMode(chipSelect, OUTPUT);
+<a id="__codelineno-2-51" name="__codelineno-2-51" href="#__codelineno-2-51"></a>    digitalWrite(chipSelect, HIGH);
+<a id="__codelineno-2-52" name="__codelineno-2-52" href="#__codelineno-2-52"></a>
+<a id="__codelineno-2-53" name="__codelineno-2-53" href="#__codelineno-2-53"></a>    if (!myLSM.begin(chipSelect))
+<a id="__codelineno-2-54" name="__codelineno-2-54" href="#__codelineno-2-54"></a>    {
+<a id="__codelineno-2-55" name="__codelineno-2-55" href="#__codelineno-2-55"></a>        Serial.println(&quot;Did not begin, check your wiring and/or I2C address!&quot;);
+<a id="__codelineno-2-56" name="__codelineno-2-56" href="#__codelineno-2-56"></a>        while (1)
+<a id="__codelineno-2-57" name="__codelineno-2-57" href="#__codelineno-2-57"></a>            ;
+<a id="__codelineno-2-58" name="__codelineno-2-58" href="#__codelineno-2-58"></a>    }
+<a id="__codelineno-2-59" name="__codelineno-2-59" href="#__codelineno-2-59"></a>
+<a id="__codelineno-2-60" name="__codelineno-2-60" href="#__codelineno-2-60"></a>    // Reset the device to default settings. This if helpful is you&#39;re doing multiple
+<a id="__codelineno-2-61" name="__codelineno-2-61" href="#__codelineno-2-61"></a>    // uploads testing different settings.
+<a id="__codelineno-2-62" name="__codelineno-2-62" href="#__codelineno-2-62"></a>    myLSM.deviceReset();
+<a id="__codelineno-2-63" name="__codelineno-2-63" href="#__codelineno-2-63"></a>
+<a id="__codelineno-2-64" name="__codelineno-2-64" href="#__codelineno-2-64"></a>    // Wait for it to finish reseting
+<a id="__codelineno-2-65" name="__codelineno-2-65" href="#__codelineno-2-65"></a>    while (!myLSM.getDeviceReset())
+<a id="__codelineno-2-66" name="__codelineno-2-66" href="#__codelineno-2-66"></a>    {
+<a id="__codelineno-2-67" name="__codelineno-2-67" href="#__codelineno-2-67"></a>        delay(1);
+<a id="__codelineno-2-68" name="__codelineno-2-68" href="#__codelineno-2-68"></a>    }
+<a id="__codelineno-2-69" name="__codelineno-2-69" href="#__codelineno-2-69"></a>
+<a id="__codelineno-2-70" name="__codelineno-2-70" href="#__codelineno-2-70"></a>    Serial.println(&quot;Board has been Reset.&quot;);
+<a id="__codelineno-2-71" name="__codelineno-2-71" href="#__codelineno-2-71"></a>    Serial.println(&quot;Applying settings.&quot;);
+<a id="__codelineno-2-72" name="__codelineno-2-72" href="#__codelineno-2-72"></a>
+<a id="__codelineno-2-73" name="__codelineno-2-73" href="#__codelineno-2-73"></a>    // Accelerometer and Gyroscope registers will not be updated
+<a id="__codelineno-2-74" name="__codelineno-2-74" href="#__codelineno-2-74"></a>    // until read.
+<a id="__codelineno-2-75" name="__codelineno-2-75" href="#__codelineno-2-75"></a>    myLSM.enableBlockDataUpdate();
+<a id="__codelineno-2-76" name="__codelineno-2-76" href="#__codelineno-2-76"></a>
+<a id="__codelineno-2-77" name="__codelineno-2-77" href="#__codelineno-2-77"></a>    // Set the output data rate and precision of the accelerometer
+<a id="__codelineno-2-78" name="__codelineno-2-78" href="#__codelineno-2-78"></a>    myLSM.setAccelDataRate(LSM6DSV16X_ODR_AT_7Hz5);
+<a id="__codelineno-2-79" name="__codelineno-2-79" href="#__codelineno-2-79"></a>    myLSM.setAccelFullScale(LSM6DSV16X_16g);
+<a id="__codelineno-2-80" name="__codelineno-2-80" href="#__codelineno-2-80"></a>
+<a id="__codelineno-2-81" name="__codelineno-2-81" href="#__codelineno-2-81"></a>    // Set the output data rate and precision of the gyroscope
+<a id="__codelineno-2-82" name="__codelineno-2-82" href="#__codelineno-2-82"></a>    myLSM.setGyroDataRate(LSM6DSV16X_ODR_AT_15Hz);
+<a id="__codelineno-2-83" name="__codelineno-2-83" href="#__codelineno-2-83"></a>    myLSM.setGyroFullScale(LSM6DSV16X_2000dps);
+<a id="__codelineno-2-84" name="__codelineno-2-84" href="#__codelineno-2-84"></a>
+<a id="__codelineno-2-85" name="__codelineno-2-85" href="#__codelineno-2-85"></a>    // Enable filter settling.
+<a id="__codelineno-2-86" name="__codelineno-2-86" href="#__codelineno-2-86"></a>    myLSM.enableFilterSettling();
+<a id="__codelineno-2-87" name="__codelineno-2-87" href="#__codelineno-2-87"></a>
+<a id="__codelineno-2-88" name="__codelineno-2-88" href="#__codelineno-2-88"></a>    // Turn on the accelerometer&#39;s filter and apply settings.
+<a id="__codelineno-2-89" name="__codelineno-2-89" href="#__codelineno-2-89"></a>    myLSM.enableAccelLP2Filter();
+<a id="__codelineno-2-90" name="__codelineno-2-90" href="#__codelineno-2-90"></a>    myLSM.setAccelLP2Bandwidth(LSM6DSV16X_XL_STRONG);
+<a id="__codelineno-2-91" name="__codelineno-2-91" href="#__codelineno-2-91"></a>
+<a id="__codelineno-2-92" name="__codelineno-2-92" href="#__codelineno-2-92"></a>    // Turn on the gyroscope&#39;s filter and apply settings.
+<a id="__codelineno-2-93" name="__codelineno-2-93" href="#__codelineno-2-93"></a>    myLSM.enableGyroLP1Filter();
+<a id="__codelineno-2-94" name="__codelineno-2-94" href="#__codelineno-2-94"></a>    myLSM.setGyroLP1Bandwidth(LSM6DSV16X_GY_ULTRA_LIGHT);
+<a id="__codelineno-2-95" name="__codelineno-2-95" href="#__codelineno-2-95"></a>
+<a id="__codelineno-2-96" name="__codelineno-2-96" href="#__codelineno-2-96"></a>    Serial.print(&quot;Ready.&quot;);
+<a id="__codelineno-2-97" name="__codelineno-2-97" href="#__codelineno-2-97"></a>}
+<a id="__codelineno-2-98" name="__codelineno-2-98" href="#__codelineno-2-98"></a>
+<a id="__codelineno-2-99" name="__codelineno-2-99" href="#__codelineno-2-99"></a>void loop()
+<a id="__codelineno-2-100" name="__codelineno-2-100" href="#__codelineno-2-100"></a>{
+<a id="__codelineno-2-101" name="__codelineno-2-101" href="#__codelineno-2-101"></a>
+<a id="__codelineno-2-102" name="__codelineno-2-102" href="#__codelineno-2-102"></a>    // Check if both gyroscope and accelerometer data is available.
+<a id="__codelineno-2-103" name="__codelineno-2-103" href="#__codelineno-2-103"></a>    if (myLSM.checkStatus())
+<a id="__codelineno-2-104" name="__codelineno-2-104" href="#__codelineno-2-104"></a>    {
+<a id="__codelineno-2-105" name="__codelineno-2-105" href="#__codelineno-2-105"></a>        myLSM.getAccel(&amp;accelData);
+<a id="__codelineno-2-106" name="__codelineno-2-106" href="#__codelineno-2-106"></a>        myLSM.getGyro(&amp;gyroData);
+<a id="__codelineno-2-107" name="__codelineno-2-107" href="#__codelineno-2-107"></a>        Serial.print(&quot;Accelerometer: &quot;);
+<a id="__codelineno-2-108" name="__codelineno-2-108" href="#__codelineno-2-108"></a>        Serial.print(&quot;X: &quot;);
+<a id="__codelineno-2-109" name="__codelineno-2-109" href="#__codelineno-2-109"></a>        Serial.print(accelData.xData);
+<a id="__codelineno-2-110" name="__codelineno-2-110" href="#__codelineno-2-110"></a>        Serial.print(&quot; &quot;);
+<a id="__codelineno-2-111" name="__codelineno-2-111" href="#__codelineno-2-111"></a>        Serial.print(&quot;Y: &quot;);
+<a id="__codelineno-2-112" name="__codelineno-2-112" href="#__codelineno-2-112"></a>        Serial.print(accelData.yData);
+<a id="__codelineno-2-113" name="__codelineno-2-113" href="#__codelineno-2-113"></a>        Serial.print(&quot; &quot;);
+<a id="__codelineno-2-114" name="__codelineno-2-114" href="#__codelineno-2-114"></a>        Serial.print(&quot;Z: &quot;);
+<a id="__codelineno-2-115" name="__codelineno-2-115" href="#__codelineno-2-115"></a>        Serial.print(accelData.zData);
+<a id="__codelineno-2-116" name="__codelineno-2-116" href="#__codelineno-2-116"></a>        Serial.println(&quot; &quot;);
+<a id="__codelineno-2-117" name="__codelineno-2-117" href="#__codelineno-2-117"></a>        Serial.print(&quot;Gyroscope: &quot;);
+<a id="__codelineno-2-118" name="__codelineno-2-118" href="#__codelineno-2-118"></a>        Serial.print(&quot;X: &quot;);
+<a id="__codelineno-2-119" name="__codelineno-2-119" href="#__codelineno-2-119"></a>        Serial.print(gyroData.xData);
+<a id="__codelineno-2-120" name="__codelineno-2-120" href="#__codelineno-2-120"></a>        Serial.print(&quot; &quot;);
+<a id="__codelineno-2-121" name="__codelineno-2-121" href="#__codelineno-2-121"></a>        Serial.print(&quot;Y: &quot;);
+<a id="__codelineno-2-122" name="__codelineno-2-122" href="#__codelineno-2-122"></a>        Serial.print(gyroData.yData);
+<a id="__codelineno-2-123" name="__codelineno-2-123" href="#__codelineno-2-123"></a>        Serial.print(&quot; &quot;);
+<a id="__codelineno-2-124" name="__codelineno-2-124" href="#__codelineno-2-124"></a>        Serial.print(&quot;Z: &quot;);
+<a id="__codelineno-2-125" name="__codelineno-2-125" href="#__codelineno-2-125"></a>        Serial.print(gyroData.zData);
+<a id="__codelineno-2-126" name="__codelineno-2-126" href="#__codelineno-2-126"></a>        Serial.println(&quot; &quot;);
+<a id="__codelineno-2-127" name="__codelineno-2-127" href="#__codelineno-2-127"></a>    }
+<a id="__codelineno-2-128" name="__codelineno-2-128" href="#__codelineno-2-128"></a>
+<a id="__codelineno-2-129" name="__codelineno-2-129" href="#__codelineno-2-129"></a>    delay(100);
+<a id="__codelineno-2-130" name="__codelineno-2-130" href="#__codelineno-2-130"></a>}
+</code></pre></div>
+</details>
+<p>The wiring for this example is fairly straight forward, if somewhat ugly. Here's what it looks like:</p>
+<figure>
+<p><a href="../assets/imgs/Example3_WiringTake2.jpg" title="Click to enlarge"><img alt="LSM6DSV16X Arduino Example 3" src="../assets/imgs/Example3_WiringTake2.jpg" width="90%" /></a></p>
+<figcaption>
+<p>Example 3</p>
+</figcaption>
+</figure>
+<p>And here are the connections:
+<center></p>
+<table>
+    <th colspan="2" align="center"><b>Pin Connections</b></th>
+    <tr align="center">
+        <td><b>Qwiic Breakout Pin</b></td>
+        <td><b>RedBoard Pin</b></td>    
+    </tr>   
+    <tr align="center">
+        <td>PICO</td>
+        <td>11</td>
+    </tr>
+    <tr align="center">
+        <td>POCI</td>
+        <td>12</td>       
+    </tr> 
+    <tr align="center">
+        <td>SCLK</td>
+        <td>13</td>
+    </tr>
+    <tr align="center"> 
+        <td>CS</td> 
+        <td>A4</td>
+    </tr>
+</table>
+<p></center></p>
+<p>Once you get the correct port and board selected and the code is uploaded, you should see something like the following: </p>
+<figure>
+<p><a href="../assets/imgs/Example3_Output.jpg" title="Click to enlarge"><img alt="LSM6DSV16X Arduino Example 3 Output" src="../assets/imgs/Example3_Output.jpg" width="90%" /></a></p>
+<figcaption>
+<p>Example 3 Output</p>
+</figcaption>
+</figure>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>If you are using the SparkFun RedBoard Qwiic and your output only says "Reset. Applying Settings." with no other output, make sure that you have your I/O jumper set correctly. You'll find the 3V3 vs 5V jumper on the front of the RedBoard Qwiic. You'll need to cut the connective trace to 5V and solder the center jumper pad to the 3V3 pad. More information can be found in the <a href="https://learn.sparkfun.com/tutorials/redboard-qwiic-hookup-guide/all#hardware-overview">RedBoard Qwiic Hookup Guide</a>. </p>
+<p><figure markdown>
+<a href="../assets/imgs/Qwiic_Redboard_-_IO_Jumper.jfif" title="Click to enlarge"><img alt="3V3/5V Jumper on the RedBoard" src="../assets/imgs/Qwiic_Redboard_-_IO_Jumper.jfif" width="90%" /></a>
+<figcaption markdown>3V3/5V Jumper on the RedBoard</figcaption>
+</figure></p>
+</div>
+<!-- 
+    https://github.com/sparkfun/SparkFun_LSM6DSV16X_Arduino_Library/blob/main/examples/example3_spi/example3_spi.ino
+-->
+
+<h3 id="further-examples">Further Examples</h3>
+<p>There are a few more examples in the library that get you started with I<sup>2</sup>C speeds, Qvar, and single/double tap. Feel free to explore and play with these examples to maximize your use of the SparkFun 6DoF - LSM6DSV16X (Qwiic) or  SparkFun Micro 6DoF - LSM6DSV16X (Qwiic)!</p>
+<!-- Starting comment of example 4
+###Example 4: Basic Readings
+
+ This example shows how to retrieve accelerometer and gyroscopic data as fast as the I2C bus will allow.
+
+ If you want to run the accel and gyro at 416Hz, you need to use 400kHz I2C. See the Wire.setClock(400000); at the start of setup().
+
+ This example also allows you to run the accel and gyro at different rates,
+ should you want to. To find Example 4, go to **File** > **Examples** > **SparkFun 6DoF LSM6DSV16X** > **example4_faster_I2C**:
+
+<figure markdown>
+[![LSM6DSV16X Arduino Example 4](assets/imgs/Example4_Menu.jpg){ width="90%" }](assets/imgs/Example4_Menu.jpg "Click to enlarge")
+<figcaption markdown>Finding Example 4</figcaption>
+</figure>
+
+Alternatively, you can expand the link below and copy and paste the code into a shiny new Arduino sketch: 
+
+
+??? "Example 4 Arduino Code"
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>/*
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>example1-basic.ino
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>This example shows basic data retrieval from the SparkFun Temperature Sensor - STTS22H.
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>Output Data Rates: 
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>STTS22H_POWER_DOWN
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>STTS22H_ONE_SHOT  
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>STTS22H_1Hz       
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>STTS22H_25Hz      
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>STTS22H_50Hz      
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>STTS22H_100Hz     
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>STTS22H_200Hz     
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>Written by: 
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>Elias Santistevan @ SparkFun Electronics December, 2022
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>Products: 
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>   SparkFun Temperature Sensor - STTS2H              https://www.sparkfun.com/products/21262
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>   SparkFun Micro Temperature Sensor - STTS2H        https://www.sparkfun.com/products/21051
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>Repository:
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>     https://github.com/sparkfun/SparkFun_STTS22H_Arduino_Library
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>SparkFun code, firmware, and software is released under the MIT
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>License(http://opensource.org/licenses/MIT).
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>*/
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>#include &lt;Wire.h&gt;
+<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>#include &quot;SparkFun_STTS22H.h&quot;
+<a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>
+<a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>SparkFun_STTS22H mySTTS; 
+<a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>
+<a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>float temp; 
+<a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>
+<a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>void setup()
+<a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a>{
+<a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a>
+<a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a>    Wire.begin();
+<a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a>
+<a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a>    Serial.begin(115200);
+<a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a>
+<a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a>    if( !mySTTS.begin() )
+<a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a>    {
+<a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a>        Serial.println(&quot;Did not begin.&quot;);
+<a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a>        while(1);
+<a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a>    }
+<a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a>
+<a id="__codelineno-3-51" name="__codelineno-3-51" href="#__codelineno-3-51"></a>    Serial.println(&quot;Ready&quot;);
+<a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a>
+<a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a>    // Other output data rates can be found in the description
+<a id="__codelineno-3-54" name="__codelineno-3-54" href="#__codelineno-3-54"></a>    // above. To change the ODR or mode, the device must first be
+<a id="__codelineno-3-55" name="__codelineno-3-55" href="#__codelineno-3-55"></a>    // powered down.
+<a id="__codelineno-3-56" name="__codelineno-3-56" href="#__codelineno-3-56"></a>    mySTTS.setDataRate(STTS22H_POWER_DOWN);
+<a id="__codelineno-3-57" name="__codelineno-3-57" href="#__codelineno-3-57"></a>    delay(10);
+<a id="__codelineno-3-58" name="__codelineno-3-58" href="#__codelineno-3-58"></a>    mySTTS.setDataRate(STTS22H_1Hz);
+<a id="__codelineno-3-59" name="__codelineno-3-59" href="#__codelineno-3-59"></a>
+<a id="__codelineno-3-60" name="__codelineno-3-60" href="#__codelineno-3-60"></a>    // Enables incrementing register behavior for the IC.
+<a id="__codelineno-3-61" name="__codelineno-3-61" href="#__codelineno-3-61"></a>    // It is not enabled by default as the datsheet states and
+<a id="__codelineno-3-62" name="__codelineno-3-62" href="#__codelineno-3-62"></a>    // is vital for reading the two temperature registers.
+<a id="__codelineno-3-63" name="__codelineno-3-63" href="#__codelineno-3-63"></a>    mySTTS.enableAutoIncrement();
+<a id="__codelineno-3-64" name="__codelineno-3-64" href="#__codelineno-3-64"></a>
+<a id="__codelineno-3-65" name="__codelineno-3-65" href="#__codelineno-3-65"></a>    delay(100);
+<a id="__codelineno-3-66" name="__codelineno-3-66" href="#__codelineno-3-66"></a>}
+<a id="__codelineno-3-67" name="__codelineno-3-67" href="#__codelineno-3-67"></a>
+<a id="__codelineno-3-68" name="__codelineno-3-68" href="#__codelineno-3-68"></a>void loop()
+<a id="__codelineno-3-69" name="__codelineno-3-69" href="#__codelineno-3-69"></a>{
+<a id="__codelineno-3-70" name="__codelineno-3-70" href="#__codelineno-3-70"></a>
+<a id="__codelineno-3-71" name="__codelineno-3-71" href="#__codelineno-3-71"></a>    // Only use data ready for one-shot mode or 1Hz output. 
+<a id="__codelineno-3-72" name="__codelineno-3-72" href="#__codelineno-3-72"></a>    if( mySTTS.dataReady() ) 
+<a id="__codelineno-3-73" name="__codelineno-3-73" href="#__codelineno-3-73"></a>    {
+<a id="__codelineno-3-74" name="__codelineno-3-74" href="#__codelineno-3-74"></a>
+<a id="__codelineno-3-75" name="__codelineno-3-75" href="#__codelineno-3-75"></a>        mySTTS.getTemperatureF(&amp;temp);
+<a id="__codelineno-3-76" name="__codelineno-3-76" href="#__codelineno-3-76"></a>
+<a id="__codelineno-3-77" name="__codelineno-3-77" href="#__codelineno-3-77"></a>        // Temperature in different units can be retrieved
+<a id="__codelineno-3-78" name="__codelineno-3-78" href="#__codelineno-3-78"></a>        // using the following functions.
+<a id="__codelineno-3-79" name="__codelineno-3-79" href="#__codelineno-3-79"></a>
+<a id="__codelineno-3-80" name="__codelineno-3-80" href="#__codelineno-3-80"></a>        //mySTTS.getTemperatureC(&amp;temp);
+<a id="__codelineno-3-81" name="__codelineno-3-81" href="#__codelineno-3-81"></a>        //mySTTS.getTemperatureK(&amp;temp);
+<a id="__codelineno-3-82" name="__codelineno-3-82" href="#__codelineno-3-82"></a>
+<a id="__codelineno-3-83" name="__codelineno-3-83" href="#__codelineno-3-83"></a>        Serial.print(&quot;Temp: &quot;); 
+<a id="__codelineno-3-84" name="__codelineno-3-84" href="#__codelineno-3-84"></a>        Serial.print(temp);
+<a id="__codelineno-3-85" name="__codelineno-3-85" href="#__codelineno-3-85"></a>        Serial.println(&quot;F&quot;); 
+<a id="__codelineno-3-86" name="__codelineno-3-86" href="#__codelineno-3-86"></a>
+<a id="__codelineno-3-87" name="__codelineno-3-87" href="#__codelineno-3-87"></a>    } 
+<a id="__codelineno-3-88" name="__codelineno-3-88" href="#__codelineno-3-88"></a>
+<a id="__codelineno-3-89" name="__codelineno-3-89" href="#__codelineno-3-89"></a>    // delay = 1/ODR 
+<a id="__codelineno-3-90" name="__codelineno-3-90" href="#__codelineno-3-90"></a>    delay(1000);
+<a id="__codelineno-3-91" name="__codelineno-3-91" href="#__codelineno-3-91"></a>
+<a id="__codelineno-3-92" name="__codelineno-3-92" href="#__codelineno-3-92"></a>}
+</code></pre></div>
+
+
+<!-- 
+    https://github.com/sparkfun/SparkFun_LSM6DSV16X_Arduino_Library/blob/main/examples/example4_faster_I2C/example4_faster_I2C.ino
+-->
+<!-- Starting comment of example 5
+
+###Example 5: Basic Readings
+
+This example shows the basic setup and functions for the QVar sensing pins (AH1/AH2). 
+
+Before running this example you'll need to cut the SDX and SCX jumpers on the bottom side of the board. These pins are not broken out on the micro.
+
+The Qvar pins are analog input pins and can be used for a wide range of applications. However, to use them on the SparkFun 6DoF LSM6DSV16X you'll need to add some kind of filter, depending on your application, to the unpopulated pads. You can refer to the [two application notes from STMicroelectronics here](https://www.st.com/en/mems-and-sensors/lsm6dsv16x.html#documentation).
+
+To find Example 5, go to **File** > **Examples** > **SparkFun 6DoF LSM6DSV16X** > **example5_qvar_sensing**:
+
+<figure markdown>
+[![LSM6DSV16X Arduino Example 5](assets/imgs/Example5_Menu.jpg){ width="90%" }](assets/imgs/Example5_Menu.jpg "Click to enlarge")
+<figcaption markdown>Finding Example 5</figcaption>
+</figure>
+
+Alternatively, you can expand the link below and copy and paste the code into a shiny new Arduino sketch: 
+
+
+??? "Example 5 Arduino Code"
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>/*
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>example1-basic.ino
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>This example shows basic data retrieval from the SparkFun Temperature Sensor - STTS22H.
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>Output Data Rates: 
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>STTS22H_POWER_DOWN
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>STTS22H_ONE_SHOT  
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>STTS22H_1Hz       
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>STTS22H_25Hz      
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>STTS22H_50Hz      
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>STTS22H_100Hz     
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>STTS22H_200Hz     
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>Written by: 
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>Elias Santistevan @ SparkFun Electronics December, 2022
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>Products: 
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>   SparkFun Temperature Sensor - STTS2H              https://www.sparkfun.com/products/21262
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>   SparkFun Micro Temperature Sensor - STTS2H        https://www.sparkfun.com/products/21051
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>Repository:
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>     https://github.com/sparkfun/SparkFun_STTS22H_Arduino_Library
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>SparkFun code, firmware, and software is released under the MIT
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>License(http://opensource.org/licenses/MIT).
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>
+<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>*/
+<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>
+<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>#include &lt;Wire.h&gt;
+<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>#include &quot;SparkFun_STTS22H.h&quot;
+<a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>
+<a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>SparkFun_STTS22H mySTTS; 
+<a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>
+<a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>float temp; 
+<a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>
+<a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>void setup()
+<a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a>{
+<a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a>
+<a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a>    Wire.begin();
+<a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a>
+<a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a>    Serial.begin(115200);
+<a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a>
+<a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a>    if( !mySTTS.begin() )
+<a id="__codelineno-4-46" name="__codelineno-4-46" href="#__codelineno-4-46"></a>    {
+<a id="__codelineno-4-47" name="__codelineno-4-47" href="#__codelineno-4-47"></a>        Serial.println(&quot;Did not begin.&quot;);
+<a id="__codelineno-4-48" name="__codelineno-4-48" href="#__codelineno-4-48"></a>        while(1);
+<a id="__codelineno-4-49" name="__codelineno-4-49" href="#__codelineno-4-49"></a>    }
+<a id="__codelineno-4-50" name="__codelineno-4-50" href="#__codelineno-4-50"></a>
+<a id="__codelineno-4-51" name="__codelineno-4-51" href="#__codelineno-4-51"></a>    Serial.println(&quot;Ready&quot;);
+<a id="__codelineno-4-52" name="__codelineno-4-52" href="#__codelineno-4-52"></a>
+<a id="__codelineno-4-53" name="__codelineno-4-53" href="#__codelineno-4-53"></a>    // Other output data rates can be found in the description
+<a id="__codelineno-4-54" name="__codelineno-4-54" href="#__codelineno-4-54"></a>    // above. To change the ODR or mode, the device must first be
+<a id="__codelineno-4-55" name="__codelineno-4-55" href="#__codelineno-4-55"></a>    // powered down.
+<a id="__codelineno-4-56" name="__codelineno-4-56" href="#__codelineno-4-56"></a>    mySTTS.setDataRate(STTS22H_POWER_DOWN);
+<a id="__codelineno-4-57" name="__codelineno-4-57" href="#__codelineno-4-57"></a>    delay(10);
+<a id="__codelineno-4-58" name="__codelineno-4-58" href="#__codelineno-4-58"></a>    mySTTS.setDataRate(STTS22H_1Hz);
+<a id="__codelineno-4-59" name="__codelineno-4-59" href="#__codelineno-4-59"></a>
+<a id="__codelineno-4-60" name="__codelineno-4-60" href="#__codelineno-4-60"></a>    // Enables incrementing register behavior for the IC.
+<a id="__codelineno-4-61" name="__codelineno-4-61" href="#__codelineno-4-61"></a>    // It is not enabled by default as the datsheet states and
+<a id="__codelineno-4-62" name="__codelineno-4-62" href="#__codelineno-4-62"></a>    // is vital for reading the two temperature registers.
+<a id="__codelineno-4-63" name="__codelineno-4-63" href="#__codelineno-4-63"></a>    mySTTS.enableAutoIncrement();
+<a id="__codelineno-4-64" name="__codelineno-4-64" href="#__codelineno-4-64"></a>
+<a id="__codelineno-4-65" name="__codelineno-4-65" href="#__codelineno-4-65"></a>    delay(100);
+<a id="__codelineno-4-66" name="__codelineno-4-66" href="#__codelineno-4-66"></a>}
+<a id="__codelineno-4-67" name="__codelineno-4-67" href="#__codelineno-4-67"></a>
+<a id="__codelineno-4-68" name="__codelineno-4-68" href="#__codelineno-4-68"></a>void loop()
+<a id="__codelineno-4-69" name="__codelineno-4-69" href="#__codelineno-4-69"></a>{
+<a id="__codelineno-4-70" name="__codelineno-4-70" href="#__codelineno-4-70"></a>
+<a id="__codelineno-4-71" name="__codelineno-4-71" href="#__codelineno-4-71"></a>    // Only use data ready for one-shot mode or 1Hz output. 
+<a id="__codelineno-4-72" name="__codelineno-4-72" href="#__codelineno-4-72"></a>    if( mySTTS.dataReady() ) 
+<a id="__codelineno-4-73" name="__codelineno-4-73" href="#__codelineno-4-73"></a>    {
+<a id="__codelineno-4-74" name="__codelineno-4-74" href="#__codelineno-4-74"></a>
+<a id="__codelineno-4-75" name="__codelineno-4-75" href="#__codelineno-4-75"></a>        mySTTS.getTemperatureF(&amp;temp);
+<a id="__codelineno-4-76" name="__codelineno-4-76" href="#__codelineno-4-76"></a>
+<a id="__codelineno-4-77" name="__codelineno-4-77" href="#__codelineno-4-77"></a>        // Temperature in different units can be retrieved
+<a id="__codelineno-4-78" name="__codelineno-4-78" href="#__codelineno-4-78"></a>        // using the following functions.
+<a id="__codelineno-4-79" name="__codelineno-4-79" href="#__codelineno-4-79"></a>
+<a id="__codelineno-4-80" name="__codelineno-4-80" href="#__codelineno-4-80"></a>        //mySTTS.getTemperatureC(&amp;temp);
+<a id="__codelineno-4-81" name="__codelineno-4-81" href="#__codelineno-4-81"></a>        //mySTTS.getTemperatureK(&amp;temp);
+<a id="__codelineno-4-82" name="__codelineno-4-82" href="#__codelineno-4-82"></a>
+<a id="__codelineno-4-83" name="__codelineno-4-83" href="#__codelineno-4-83"></a>        Serial.print(&quot;Temp: &quot;); 
+<a id="__codelineno-4-84" name="__codelineno-4-84" href="#__codelineno-4-84"></a>        Serial.print(temp);
+<a id="__codelineno-4-85" name="__codelineno-4-85" href="#__codelineno-4-85"></a>        Serial.println(&quot;F&quot;); 
+<a id="__codelineno-4-86" name="__codelineno-4-86" href="#__codelineno-4-86"></a>
+<a id="__codelineno-4-87" name="__codelineno-4-87" href="#__codelineno-4-87"></a>    } 
+<a id="__codelineno-4-88" name="__codelineno-4-88" href="#__codelineno-4-88"></a>
+<a id="__codelineno-4-89" name="__codelineno-4-89" href="#__codelineno-4-89"></a>    // delay = 1/ODR 
+<a id="__codelineno-4-90" name="__codelineno-4-90" href="#__codelineno-4-90"></a>    delay(1000);
+<a id="__codelineno-4-91" name="__codelineno-4-91" href="#__codelineno-4-91"></a>
+<a id="__codelineno-4-92" name="__codelineno-4-92" href="#__codelineno-4-92"></a>}
+</code></pre></div>
+
+
+<!-- 
+    https://github.com/sparkfun/SparkFun_LSM6DSV16X_Arduino_Library/blob/main/examples/example5_qvar_sensing/example5_qvar_sensing.ino
+-->
+
+<h1 id="troubleshooting">Troubleshooting</h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+    <strong> Not working as expected and need help? </strong> <br /><br /></p>
+<p>If you need technical assistance and more information on a product that is not working as you expected, we recommend heading on over to the <a href="https://www.sparkfun.com/technical_assistance">SparkFun Technical Assistance</a> page for some initial troubleshooting. <br /><br /></p>
+<p><div style="text-align: center"><a href="https://www.sparkfun.com/technical_assistance" target="sfe_technical_assistance" class="md-button">SparkFun Technical Assistance Page</a></div></p>
+<p>If you don't find what you need there, the <a href="https://forum.sparkfun.com/index.php">SparkFun Forums</a> are a great place to find and ask for help. If this is your first visit, you'll need to <a href="https://forum.sparkfun.com/ucp.php?mode=register">create a Forum Account</a> to search product forums and post questions.<br /><br /></p>
+<p><div style="text-align: center"><a href="https://forum.sparkfun.com/ucp.php?mode=register" class="md-button">Create New Forum Account</a>&nbsp;&nbsp;&nbsp;<a href="https://forum.sparkfun.com/index.php" class="md-button md-button--primary">Log Into SparkFun Forums</a></div></p>
+</div>
+<h1 id="resources">Resources:</h1>
+
+  
+  
+
+
+
+
+  
+
+
+
+                
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright 2023 - <a href="https://www.sparkfun.com/" target="_blank" rel="noopener">SparkFun Electronics&#174;<br> <a href="https://goo.gl/maps/vkstCpQZW6jZMjzYA" target="_blank" rel="noopener">6333 Dry Creek Parkway, Niwot, Colorado 80503</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs Insiders
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/sparkfun" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.instagram.com/sparkfun" target="_blank" rel="noopener" title="www.instagram.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.github.com/sparkfun" target="_blank" rel="noopener" title="www.github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.facebook.com/SparkFun" target="_blank" rel="noopener" title="www.facebook.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/sparkfun" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.annotate", "content.action.edit", "navigation.footer", "navigation.tracking", "navigation.tabs.sticky", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.path"], "search": "../assets/javascripts/workers/search.6c7302c4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.10c6cd24.min.js"></script>
+      
+    
+  </body>
+</html>
